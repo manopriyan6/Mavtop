@@ -28,7 +28,7 @@ export const metadata: Metadata = {
       "AI-powered software, enterprise automation, cloud platforms and digital experiences. Chennai, Tamil Nadu, India.",
     images: [
       {
-        url: "/og-image.png",
+        url: "/mavtop.png",
         width: 1200,
         height: 630,
         alt: "Mavtop Technologies",
@@ -39,6 +39,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Mavtop Technologies",
     description: "Maximum Value + Top Performance",
+    images: ["/mavtop.png"],
   },
   robots: {
     index: true,
