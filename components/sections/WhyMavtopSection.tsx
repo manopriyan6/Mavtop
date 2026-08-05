@@ -18,8 +18,8 @@ const reasons = [
     title: "Maximum Value",
     description:
       "Every rupee you invest delivers measurable returns. We prioritize ROI-driven development and transparent pricing with no hidden costs.",
-    color: "#DC2626",
-    gradient: "from-red-900/20",
+    color: "var(--brand-green)",
+    gradient: "from-green-900/20",
   },
   {
     icon: Zap,
@@ -58,8 +58,8 @@ const reasons = [
     title: "24×7 Support",
     description:
       "A dedicated support team available round the clock. No escalation hell — you get direct access to senior engineers when it matters.",
-    color: "#DC2626",
-    gradient: "from-red-900/20",
+    color: "var(--brand-green)",
+    gradient: "from-green-900/20",
   },
 ];
 
@@ -106,7 +106,7 @@ export default function WhyMavtopSection() {
           </span>
           <h2 className="font-grotesk font-bold text-4xl md:text-5xl lg:text-6xl text-white mt-6 mb-4">
             Not Just a Vendor —{" "}
-            <span className="gradient-text-red">A Technology</span>
+            <span className="gradient-text-green">A Technology</span>
             <br />
             Partner
           </h2>
@@ -172,7 +172,7 @@ export default function WhyMavtopSection() {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.7, delay: 0.4 }}
           className="glass-card rounded-3xl p-8 md:p-10"
-          style={{ borderColor: "rgba(220,38,38,0.15)" }}
+          style={{ borderColor: "rgba(34,197,94,0.15)" }}
         >
           <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
             <div>

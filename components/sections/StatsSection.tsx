@@ -44,7 +44,7 @@ const stats = [
     suffix: "%",
     label: "System Uptime",
     sublabel: "Guaranteed SLA",
-    color: "#DC2626",
+    color: "var(--brand-green)",
   },
   {
     value: 500,
@@ -89,7 +89,7 @@ export default function StatsSection() {
         style={{
           width: "600px",
           height: "300px",
-          background: "linear-gradient(90deg, rgba(220,38,38,0.15), rgba(37,99,235,0.15))",
+          background: "linear-gradient(90deg, rgba(34,197,94,0.15), rgba(37,99,235,0.15))",
           borderRadius: "0",
           top: "50%",
           left: "50%",
@@ -113,7 +113,7 @@ export default function StatsSection() {
           </span>
           <h2 className="font-grotesk font-bold text-4xl md:text-5xl lg:text-6xl text-white mt-6">
             Results That{" "}
-            <span className="gradient-text-red">Speak</span> for Themselves
+            <span className="gradient-text-green">Speak</span> for Themselves
           </h2>
         </motion.div>
 

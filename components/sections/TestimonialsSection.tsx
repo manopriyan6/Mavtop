@@ -21,7 +21,7 @@ const testimonials = [
     role: "CTO",
     company: "FinServe Solutions",
     initial: "F",
-    companyColor: "#DC2626",
+    companyColor: "var(--brand-green)",
     quote:
       "Their Mavtop CRM integration with our existing stack was seamless. The AI lead scoring alone improved our conversion rate by 40%. The support team is incredible — always available, always helpful.",
     stars: 5,
@@ -100,7 +100,7 @@ export default function TestimonialsSection() {
         style={{
           width: "500px",
           height: "500px",
-          background: "radial-gradient(circle, rgba(220,38,38,0.08), transparent 70%)",
+          background: "radial-gradient(circle, rgba(34,197,94,0.08), transparent 70%)",
           top: "20%",
           left: "10%",
           animationDelay: "4s",
@@ -121,7 +121,7 @@ export default function TestimonialsSection() {
           </span>
           <h2 className="font-grotesk font-bold text-4xl md:text-5xl lg:text-6xl text-white mt-6 mb-4">
             Trusted by{" "}
-            <span className="gradient-text-red">Industry</span> Leaders
+            <span className="gradient-text-green">Industry</span> Leaders
           </h2>
           <p className="text-muted font-inter text-lg max-w-xl mx-auto">
             Real results from real businesses across India.

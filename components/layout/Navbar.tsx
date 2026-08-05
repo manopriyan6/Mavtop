@@ -37,7 +37,7 @@ export default function Navbar() {
         transition={{ duration: 0.7, ease: [0.23, 1, 0.32, 1] }}
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
           scrolled
-            ? "bg-[rgba(9,9,11,0.85)] backdrop-blur-xl border-b border-[rgba(255,255,255,0.06)] shadow-[0_4px_30px_rgba(220,38,38,0.08)]"
+            ? "bg-[rgba(9,9,11,0.85)] backdrop-blur-xl border-b border-[rgba(255,255,255,0.06)] shadow-[0_4px_30px_rgba(34,197,94,0.08)]"
             : "bg-transparent"
         }`}
       >
@@ -56,7 +56,7 @@ export default function Navbar() {
                   src="/mavtop-tran.png"
                   alt="Mavtop Technologies"
                   fill
-                  className="object-contain"
+                  className="object-contain object-left"
                   priority
                 />
               </div>
@@ -139,7 +139,7 @@ export default function Navbar() {
                     src="/mavtop-tran.png"
                     alt="Mavtop Technologies"
                     fill
-                    className="object-contain"
+                    className="object-contain object-left"
                   />
                 </div>
                 <button

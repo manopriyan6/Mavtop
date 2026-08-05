@@ -47,7 +47,7 @@ export default function ContactCTASection() {
         style={{
           width: "700px",
           height: "700px",
-          background: "radial-gradient(circle, rgba(220,38,38,0.15), transparent 70%)",
+          background: "radial-gradient(circle, rgba(34,197,94,0.15), transparent 70%)",
           top: "-20%",
           right: "-10%",
           animationDelay: "0s",
@@ -82,7 +82,7 @@ export default function ContactCTASection() {
           <h2 className="font-grotesk font-bold text-4xl md:text-6xl lg:text-7xl text-white mt-6 mb-6 leading-none">
             Ready to Build
             <br />
-            <span className="gradient-text-red">the Future?</span>
+            <span className="gradient-text-green">the Future?</span>
           </h2>
           <p className="font-inter text-lg md:text-xl text-muted max-w-2xl mx-auto mb-8 leading-relaxed">
             Let's transform your ideas into world-class digital products.
@@ -236,7 +236,7 @@ export default function ContactCTASection() {
                 Our Process
               </h3>
               {[
-                { step: "01", label: "Discovery Call", desc: "We understand your needs", color: "#DC2626" },
+                { step: "01", label: "Discovery Call", desc: "We understand your needs", color: "var(--brand-green)" },
                 { step: "02", label: "Proposal & Quote", desc: "Transparent pricing within 48h", color: "#2563EB" },
                 { step: "03", label: "Kickoff Sprint", desc: "Design + architecture phase", color: "#7C3AED" },
                 { step: "04", label: "Build & Deliver", desc: "Agile sprints, weekly demos", color: "#059669" },
@@ -263,9 +263,9 @@ export default function ContactCTASection() {
             {/* Booking CTA */}
             <div
               className="glass-card rounded-2xl p-6 relative overflow-hidden"
-              style={{ borderColor: "rgba(220,38,38,0.2)" }}
+              style={{ borderColor: "rgba(34,197,94,0.2)" }}
             >
-              <div className="absolute inset-0 bg-gradient-to-br from-red-900/20 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-br from-green-900/20 to-transparent" />
               <div className="relative z-10">
                 <div className="w-10 h-10 rounded-xl bg-brand-green/20 border border-brand-green/30 flex items-center justify-center mb-4">
                   <Calendar size={18} className="text-brand-green" />

@@ -108,7 +108,7 @@ export default function Footer() {
                   src="/mavtop-tran.png"
                   alt="Mavtop Technologies"
                   fill
-                  className="object-contain"
+                  className="object-contain object-left"
                 />
               </div>
             </a>

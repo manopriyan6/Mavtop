@@ -21,12 +21,12 @@ const products = [
     description:
       "Intelligent customer relationship management with AI insights, automated workflows, and 360° customer views. Turn every interaction into an opportunity.",
     icon: Users,
-    color: "#DC2626",
-    gradientFrom: "from-red-900/40",
+    color: "var(--brand-green)",
+    gradientFrom: "from-green-900/40",
     gradientTo: "to-transparent",
     features: ["AI Lead Scoring", "Pipeline Automation", "Real-time Analytics", "WhatsApp Integration"],
     badge: "Flagship Product",
-    badgeColor: "#DC2626",
+    badgeColor: "var(--brand-green)",
   },
   {
     id: "whatsapp",
@@ -131,7 +131,7 @@ export default function ProductsSection() {
                   delay: index * 0.12,
                   ease: [0.23, 1, 0.32, 1],
                 }}
-                className={`glass-card rounded-3xl p-8 group cursor-pointer relative overflow-hidden hover-glow-red`}
+                className={`glass-card rounded-3xl p-8 group cursor-pointer relative overflow-hidden hover-glow-green`}
                 style={{ borderColor: `${product.color}15` }}
                 whileHover={{ y: -8 }}
               >

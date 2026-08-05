@@ -21,10 +21,10 @@ const services = [
   {
     icon: Brain,
     category: "AI Solutions",
-    color: "#DC2626",
-    gradient: "from-red-900/30 to-transparent",
-    borderColor: "rgba(220,38,38,0.2)",
-    glowColor: "rgba(220,38,38,0.15)",
+    color: "var(--brand-green)",
+    gradient: "from-green-900/30 to-transparent",
+    borderColor: "rgba(34,197,94,0.2)",
+    glowColor: "rgba(34,197,94,0.15)",
     items: ["AI Agents", "Intelligent Chatbots", "Process Automation", "Machine Learning", "Computer Vision", "NLP Solutions"],
     description: "Transform your operations with cutting-edge artificial intelligence — from conversational AI to predictive analytics.",
     badge: "Most Popular",
@@ -81,10 +81,10 @@ const services = [
   {
     icon: Zap,
     category: "Digital Transformation",
-    color: "#DC2626",
-    gradient: "from-red-900/20 to-blue-900/20",
-    borderColor: "rgba(220,38,38,0.15)",
-    glowColor: "rgba(220,38,38,0.1)",
+    color: "var(--brand-green)",
+    gradient: "from-green-900/20 to-blue-900/20",
+    borderColor: "rgba(34,197,94,0.15)",
+    glowColor: "rgba(34,197,94,0.1)",
     items: ["Legacy Modernization", "Process Optimization", "AI Integration", "Change Management"],
     description: "Helping businesses move from traditional systems to AI-driven operations — seamlessly and at speed.",
     badge: "Featured",
@@ -143,7 +143,7 @@ export default function ServicesSection() {
           </span>
           <h2 className="font-grotesk font-bold text-4xl md:text-5xl lg:text-6xl text-white mt-6 mb-4">
             Full-Spectrum{" "}
-            <span className="gradient-text-red">Technology</span>
+            <span className="gradient-text-green">Technology</span>
             <br />
             Services
           </h2>

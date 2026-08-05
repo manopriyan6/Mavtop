@@ -22,7 +22,7 @@ function Particles() {
             animationDelay: `${Math.random() * 8}s`,
             background:
               i % 3 === 0
-                ? "rgba(220,38,38,0.7)"
+                ? "rgba(34,197,94,0.7)"
                 : i % 3 === 1
                 ? "rgba(37,99,235,0.7)"
                 : "rgba(124,58,237,0.5)",
@@ -96,7 +96,7 @@ export default function HeroSection() {
         style={{
           width: "600px",
           height: "600px",
-          background: "radial-gradient(circle, rgba(220,38,38,0.25), transparent 70%)",
+          background: "radial-gradient(circle, rgba(34,197,94,0.25), transparent 70%)",
           top: "-10%",
           right: "-5%",
           animationDelay: "0s",
@@ -158,7 +158,7 @@ export default function HeroSection() {
           className="text-3xl md:text-5xl lg:text-6xl font-grotesk font-bold mb-6 max-w-5xl mx-auto leading-tight"
         >
           Engineering the Future with{" "}
-          <span className="gradient-text-red">Maximum Value</span>
+          <span className="gradient-text-green">Maximum Value</span>
           {" "}+{" "}
           <span className="gradient-text-blue">Top Performance</span>
         </motion.p>
