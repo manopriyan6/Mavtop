@@ -55,7 +55,7 @@ export default function Navbar() {
                 }}
               >
                 <Image
-                  src="/mavtop_rectamgele_png.png"
+                  src="/mavtop-tran.png"
                   alt="Mavtop Technologies"
                   fill
                   className="object-contain p-2"
@@ -140,7 +140,7 @@ export default function Navbar() {
                   }}
                 >
                   <Image
-                    src="/mavtop_rectamgele_png.png"
+                    src="/mavtop-tran.png"
                     alt="Mavtop Technologies"
                     fill
                     className="object-contain p-2"

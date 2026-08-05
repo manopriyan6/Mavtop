@@ -107,7 +107,7 @@ export default function Footer() {
                 }}
               >
                 <Image
-                  src="/mavtop_rectamgele_png.png"
+                  src="/mavtop-tran.png"
                   alt="Mavtop Technologies"
                   fill
                   className="object-contain p-3"
