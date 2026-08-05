@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { ArrowRight, Play, Star } from "lucide-react";
+import BrandsSection from "@/components/sections/BrandsSection";
 
 export default function HeroSection() {
   const heroRef = useRef<HTMLElement>(null);
@@ -12,18 +13,15 @@ export default function HeroSection() {
     <section
       id="home"
       ref={heroRef}
-      className="relative min-h-screen flex flex-col items-center justify-start pt-32 pb-16 overflow-hidden bg-[#FAFAFA] dark:bg-[#0D0D0F]"
+      className="relative min-h-[100dvh] flex flex-col items-center justify-between pt-32 pb-0 overflow-hidden bg-[#FAFAFA] dark:bg-[#0D0D0F]"
     >
       {/* Background styling - very clean, no neon glows */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden flex justify-center">
         {/* Subtle radial gradient to center focus */}
-        <div className="absolute top-0 w-full h-[600px] bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-slate-100/80 dark:from-brand-blue/5 via-transparent to-transparent"></div>
-        
-        {/* Subtle grid pattern - very light */}
-        <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-[0.015] mix-blend-overlay"></div>
+        <div className="absolute top-0 w-full h-[600px] bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-slate-100/80 dark:from-brand-blue/5 via-transparent to-transparent transform-gpu"></div>
       </div>
 
-      <div className="container-custom relative z-10 text-center flex flex-col items-center">
+      <div className="container-custom relative z-10 text-center flex flex-col items-center flex-1 justify-center">
         
 
 
@@ -62,7 +60,7 @@ export default function HeroSection() {
             href="#contact"
             className="inline-flex items-center justify-center gap-2 px-8 py-4 text-base font-semibold text-white bg-[#2563EB] hover:bg-[#1D4ED8] rounded-xl shadow-[0_8px_30px_rgb(37,99,235,0.2)] transition-all hover:-translate-y-0.5"
           >
-            Get started for FREE
+            Book a Call
             <ArrowRight size={18} />
           </a>
           
@@ -82,15 +80,17 @@ export default function HeroSection() {
                <img 
                  src="/hero-abstract.png" 
                  alt="Mavtop Abstract Technology"
-                 className="w-full h-full object-cover object-center dark:opacity-60 dark:mix-blend-luminosity"
+                 className="w-full h-full object-cover object-center dark:opacity-30 transform-gpu"
                />
-               <div className="absolute inset-0 hidden dark:block bg-gradient-to-tr from-[#0D0D0F]/80 via-transparent to-[#1E2038]/40 mix-blend-overlay" />
+               <div className="absolute inset-0 hidden dark:block bg-gradient-to-tr from-[#0D0D0F]/90 via-transparent to-[#1E2038]/60 transform-gpu" />
             </div>
 
           </div>
         </motion.div>
-
       </div>
+
+      {/* Brands at the bottom of the hero */}
+      <BrandsSection />
     </section>
   );
 }

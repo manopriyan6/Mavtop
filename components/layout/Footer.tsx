@@ -2,30 +2,31 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { Phone, Mail, MapPin, ArrowUp } from "lucide-react";
+import Link from "next/link";
+import { Phone, Mail, MapPin } from "lucide-react";
 
 const footerLinks = {
   Services: [
-    { label: "AI Solutions", href: "#services" },
-    { label: "Software Development", href: "#services" },
-    { label: "Cloud & DevOps", href: "#services" },
-    { label: "Mobile Apps", href: "#services" },
-    { label: "Web Applications", href: "#services" },
-    { label: "Digital Transformation", href: "#services" },
+    { label: "AI Solutions", href: "/services" },
+    { label: "Software Development", href: "/services" },
+    { label: "Cloud & DevOps", href: "/services" },
+    { label: "Mobile Apps", href: "/services" },
+    { label: "Web Applications", href: "/services" },
+    { label: "Digital Transformation", href: "/services" },
   ],
   Products: [
-    { label: "Mavtop CRM", href: "#products" },
-    { label: "WhatsApp Cloud", href: "#products" },
-    { label: "Mavtop AI", href: "#products" },
-    { label: "Mavtop Billing", href: "#products" },
+    { label: "Mavtop CRM", href: "/products" },
+    { label: "WhatsApp Cloud", href: "/products" },
+    { label: "Mavtop AI", href: "/products" },
+    { label: "Mavtop Billing", href: "/products" },
   ],
   Company: [
-    { label: "About Us", href: "#why-mavtop" },
-    { label: "Our Team", href: "#why-mavtop" },
-    { label: "Careers", href: "#contact" },
-    { label: "Blog", href: "#contact" },
-    { label: "Case Studies", href: "#stats" },
-    { label: "Press", href: "#contact" },
+    { label: "Home", href: "/" },
+    { label: "About Us", href: "/about" },
+    { label: "Services", href: "/services" },
+    { label: "Solutions", href: "/solutions" },
+    { label: "Case Studies", href: "/case-studies" },
+    { label: "Contact", href: "/#contact" },
   ],
   Legal: [
     { label: "Privacy Policy", href: "/privacy-policy" },
@@ -80,33 +81,21 @@ const socials = [
 ];
 
 export default function Footer() {
-  const scrollToTop = () => window.scrollTo({ top: 0, behavior: "smooth" });
-
   return (
     <footer className="bg-white dark:bg-[#131524] border-t border-slate-200 dark:border-slate-800">
-
-      {/* ─── Top gradient line ──────────────────────────────── */}
       <div className="h-[2px] w-full bg-gradient-to-r from-transparent via-brand-blue/60 to-transparent" />
-
-      {/* ─── Main grid ─────────────────────────────────────── */}
       <div className="max-w-7xl mx-auto px-6 lg:px-8 pt-16 pb-10">
-
-        {/* Row 1: Brand | Links */}
         <div className="flex flex-col lg:flex-row gap-12 lg:gap-16">
-
-          {/* ── Brand column ── */}
           <div className="flex-shrink-0 w-full lg:w-64">
-            <a href="#home" className="inline-block mb-6 group">
+            <Link href="/" className="inline-block mb-6 group">
               <div className="relative w-[130px] h-[36px] flex items-center justify-center">
-                <Image src="/logo_black.png" alt="Mavtop Logo" fill className="object-contain dark:hidden" />
-                <Image src="/logo_white.png" alt="Mavtop Logo" fill className="object-contain hidden dark:block" />
+                <Image src="/logo_black.png" alt="Mavtop Logo" fill className="object-contain dark:hidden" unoptimized />
+                <Image src="/logo_white.png" alt="Mavtop Logo" fill className="object-contain hidden dark:block" unoptimized />
               </div>
-            </a>
-
+            </Link>
             <p className="text-slate-700 dark:text-slate-300 text-sm font-jakarta leading-relaxed mb-5 max-w-[240px]">
               Maximum Value + Top Performance. Building the future through AI, software, and cloud innovation.
             </p>
-
             <div className="flex flex-wrap gap-2 mb-6">
               {["AI", "Cloud", "Software", "Automation", "Digital"].map((t) => (
                 <span key={t} className="text-[11px] font-jakarta text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-800 rounded-full px-3 py-1">
@@ -114,7 +103,6 @@ export default function Footer() {
                 </span>
               ))}
             </div>
-
             <div className="flex gap-3">
               {socials.map((s) => (
                 <motion.a
@@ -132,8 +120,6 @@ export default function Footer() {
               ))}
             </div>
           </div>
-
-          {/* ── Nav link columns ── */}
           <div className="flex-1 grid grid-cols-2 md:grid-cols-4 gap-8">
             {Object.entries(footerLinks).map(([section, links]) => (
               <div key={section}>
@@ -143,12 +129,12 @@ export default function Footer() {
                 <ul className="space-y-3.5">
                   {links.map((link) => (
                     <li key={link.label}>
-                      <a
+                      <Link
                         href={link.href}
-                        className="text-sm font-jakarta text-slate-700 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white dark:text-white transition-colors duration-200"
+                        className="text-sm font-jakarta text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors duration-200"
                       >
                         {link.label}
-                      </a>
+                      </Link>
                     </li>
                   ))}
                 </ul>
@@ -156,7 +142,6 @@ export default function Footer() {
             ))}
           </div>
         </div>
-
         {/* ─── Contact cards ────────────────────────────────── */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-14">
           {/* Phone */}
