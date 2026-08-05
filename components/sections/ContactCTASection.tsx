@@ -82,7 +82,7 @@ export default function ContactCTASection() {
           <h2 className="font-grotesk font-bold text-4xl md:text-6xl lg:text-7xl text-white mt-6 mb-6 leading-none">
             Ready to Build
             <br />
-            <span className="gradient-text-green">the Future?</span>
+            <span className="gradient-text-red">the Future?</span>
           </h2>
           <p className="font-inter text-lg md:text-xl text-muted max-w-2xl mx-auto mb-8 leading-relaxed">
             Let's transform your ideas into world-class digital products.

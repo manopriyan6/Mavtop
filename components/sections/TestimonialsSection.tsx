@@ -121,7 +121,7 @@ export default function TestimonialsSection() {
           </span>
           <h2 className="font-grotesk font-bold text-4xl md:text-5xl lg:text-6xl text-white mt-6 mb-4">
             Trusted by{" "}
-            <span className="gradient-text-green">Industry</span> Leaders
+            <span className="gradient-text-red">Industry</span> Leaders
           </h2>
           <p className="text-muted font-inter text-lg max-w-xl mx-auto">
             Real results from real businesses across India.

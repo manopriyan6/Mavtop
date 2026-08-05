@@ -106,7 +106,7 @@ export default function WhyMavtopSection() {
           </span>
           <h2 className="font-grotesk font-bold text-4xl md:text-5xl lg:text-6xl text-white mt-6 mb-4">
             Not Just a Vendor —{" "}
-            <span className="gradient-text-green">A Technology</span>
+            <span className="gradient-text-red">A Technology</span>
             <br />
             Partner
           </h2>

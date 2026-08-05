@@ -113,7 +113,7 @@ export default function StatsSection() {
           </span>
           <h2 className="font-grotesk font-bold text-4xl md:text-5xl lg:text-6xl text-white mt-6">
             Results That{" "}
-            <span className="gradient-text-green">Speak</span> for Themselves
+            <span className="gradient-text-red">Speak</span> for Themselves
           </h2>
         </motion.div>
 

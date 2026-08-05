@@ -158,7 +158,7 @@ export default function HeroSection() {
           className="text-3xl md:text-5xl lg:text-6xl font-grotesk font-bold mb-6 max-w-5xl mx-auto leading-tight"
         >
           Engineering the Future with{" "}
-          <span className="gradient-text-green">Maximum Value</span>
+          <span className="gradient-text-red">Maximum Value</span>
           {" "}+{" "}
           <span className="gradient-text-blue">Top Performance</span>
         </motion.p>

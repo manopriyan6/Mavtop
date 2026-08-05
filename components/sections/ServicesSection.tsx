@@ -143,7 +143,7 @@ export default function ServicesSection() {
           </span>
           <h2 className="font-grotesk font-bold text-4xl md:text-5xl lg:text-6xl text-white mt-6 mb-4">
             Full-Spectrum{" "}
-            <span className="gradient-text-green">Technology</span>
+            <span className="gradient-text-red">Technology</span>
             <br />
             Services
           </h2>
