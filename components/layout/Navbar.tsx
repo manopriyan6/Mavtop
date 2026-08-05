@@ -46,19 +46,17 @@ export default function Navbar() {
             {/* Logo — horizontal rectangle on white card */}
             <a href="#home" className="flex items-center group">
               <div
-                className="relative rounded-xl overflow-hidden flex-shrink-0 group-hover:scale-105 transition-transform duration-300"
+                className="relative flex-shrink-0 group-hover:scale-105 transition-transform duration-300"
                 style={{
-                  width: "160px",
-                  height: "48px",
-                  background: "#FFFFFF",
-                  boxShadow: "0 0 0 1px rgba(220,38,38,0.3), 0 0 18px rgba(220,38,38,0.35)",
+                  width: "200px",
+                  height: "60px",
                 }}
               >
                 <Image
                   src="/mavtop-tran.png"
                   alt="Mavtop Technologies"
                   fill
-                  className="object-contain p-2"
+                  className="object-contain"
                   priority
                 />
               </div>
@@ -131,19 +129,17 @@ export default function Navbar() {
             >
               <div className="flex items-center justify-between p-6 border-b border-[rgba(255,255,255,0.06)]">
                 <div
-                  className="relative rounded-xl overflow-hidden"
+                  className="relative"
                   style={{
-                    width: "140px",
-                    height: "44px",
-                    background: "#FFFFFF",
-                    boxShadow: "0 0 0 1px rgba(220,38,38,0.3), 0 0 14px rgba(220,38,38,0.3)",
+                    width: "180px",
+                    height: "54px",
                   }}
                 >
                   <Image
                     src="/mavtop-tran.png"
                     alt="Mavtop Technologies"
                     fill
-                    className="object-contain p-2"
+                    className="object-contain"
                   />
                 </div>
                 <button

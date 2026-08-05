@@ -98,19 +98,17 @@ export default function Footer() {
           <div className="flex-shrink-0 w-full lg:w-64">
             <a href="#home" className="inline-block mb-6 group">
               <div
-                className="relative rounded-2xl overflow-hidden transition-shadow duration-300 group-hover:shadow-[0_0_30px_rgba(220,38,38,0.5)]"
+                className="relative transition-transform duration-300 group-hover:scale-105"
                 style={{
-                  width: "200px",
-                  height: "66px",
-                  background: "#FFFFFF",
-                  boxShadow: "0 0 0 1px rgba(220,38,38,0.35), 0 0 20px rgba(220,38,38,0.25)",
+                  width: "240px",
+                  height: "76px",
                 }}
               >
                 <Image
                   src="/mavtop-tran.png"
                   alt="Mavtop Technologies"
                   fill
-                  className="object-contain p-3"
+                  className="object-contain"
                 />
               </div>
             </a>
