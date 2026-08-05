@@ -22,7 +22,7 @@ const services = [
     icon: Brain,
     category: "AI Solutions",
     color: "var(--brand-blue)",
-    gradient: "from-green-900/30 to-transparent",
+    gradient: "from-slate-50 to-transparent",
     borderColor: "rgba(34,197,94,0.2)",
     glowColor: "rgba(34,197,94,0.15)",
     items: ["AI Agents", "Intelligent Chatbots", "Process Automation", "Machine Learning", "Computer Vision", "NLP Solutions"],
@@ -34,7 +34,7 @@ const services = [
     icon: Code2,
     category: "Software Development",
     color: "#2563EB",
-    gradient: "from-blue-900/30 to-transparent",
+    gradient: "from-slate-50 to-transparent",
     borderColor: "rgba(37,99,235,0.2)",
     glowColor: "rgba(37,99,235,0.15)",
     items: ["SaaS Platforms", "CRM Systems", "ERP Solutions", "Custom Software"],
@@ -46,7 +46,7 @@ const services = [
     icon: Cloud,
     category: "Cloud & DevOps",
     color: "#7C3AED",
-    gradient: "from-purple-900/30 to-transparent",
+    gradient: "from-slate-50 to-transparent",
     borderColor: "rgba(124,58,237,0.2)",
     glowColor: "rgba(124,58,237,0.15)",
     items: ["AWS Solutions", "Azure & GCP", "DevOps & CI/CD", "Infrastructure"],
@@ -70,7 +70,7 @@ const services = [
     icon: Globe,
     category: "Web Applications",
     color: "#D97706",
-    gradient: "from-amber-900/30 to-transparent",
+    gradient: "from-slate-50 to-transparent",
     borderColor: "rgba(217,119,6,0.2)",
     glowColor: "rgba(217,119,6,0.15)",
     items: ["React & Next.js", "Laravel", "Node.js", "Full-Stack"],
@@ -114,11 +114,11 @@ export default function ServicesSection() {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="services" className="section-padding relative overflow-hidden bg-[#FAFAFA]">
+    <section id="services" className="section-padding relative overflow-hidden bg-[#FAFAFA] dark:bg-[#0D0D0F]">
       {/* Section background accent */}
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-brand-blue/30 to-transparent" />
       <div
-        className="aurora-blob"
+        className="aurora-blob hidden"
         style={{
           width: "400px",
           height: "400px",
@@ -141,13 +141,13 @@ export default function ServicesSection() {
             <Activity size={12} />
             What We Build
           </span>
-          <h2 className="font-grotesk font-bold text-4xl md:text-5xl lg:text-6xl text-slate-900 mt-6 mb-4">
+          <h2 className="font-grotesk font-bold text-4xl md:text-5xl lg:text-6xl text-slate-900 dark:text-white mt-6 mb-4">
             Full-Spectrum{" "}
-            <span className="gradient-text-red">Technology</span>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#007AFF] to-[#5AC8FA]">Technology</span>
             <br />
             Services
           </h2>
-          <p className="text-slate-500 font-jakarta text-lg max-w-2xl mx-auto">
+          <p className="text-slate-500 dark:text-slate-400 font-jakarta text-lg max-w-2xl mx-auto">
             From AI-powered automation to enterprise cloud platforms — we build
             everything your business needs to lead in the digital era.
           </p>
@@ -166,17 +166,17 @@ export default function ServicesSection() {
               <motion.div
                 key={service.category}
                 variants={cardVariants}
-                className={`${service.size} bg-white shadow-[0_4px_24px_rgba(0,0,0,0.04)] border border-slate-100 rounded-2xl p-6 md:p-8 group cursor-pointer relative overflow-hidden`}
-                style={{ borderColor: service.borderColor }}
+                className={`${service.size} bg-white dark:bg-[#131524] shadow-[0_4px_24px_rgba(0,0,0,0.04)] border border-slate-100 dark:border-slate-800 rounded-2xl p-6 md:p-8 group cursor-pointer relative overflow-hidden`}
+                
                 whileHover={{
                   y: -6,
-                  boxShadow: `0 20px 60px ${service.glowColor}, 0 0 0 1px ${service.borderColor}`,
+                  boxShadow: `0 20px 60px rgba(0,0,0,0.05), 0 0 0 1px ${service.borderColor}`,
                   transition: { duration: 0.3 },
                 }}
               >
                 {/* Background gradient */}
                 <div
-                  className={`absolute inset-0 bg-gradient-to-br ${service.gradient} opacity-50 transition-opacity duration-300 group-hover:opacity-100`}
+                  className="hidden"
                 />
 
                 <div className="relative z-10">
@@ -203,12 +203,12 @@ export default function ServicesSection() {
                   </div>
 
                   {/* Title */}
-                  <h3 className="font-grotesk font-bold text-xl md:text-2xl text-slate-900 mb-3">
+                  <h3 className="font-grotesk font-bold text-xl md:text-2xl text-slate-900 dark:text-white mb-3">
                     {service.category}
                   </h3>
 
                   {/* Description */}
-                  <p className="text-slate-500 font-jakarta text-sm leading-relaxed mb-5">
+                  <p className="text-slate-500 dark:text-slate-400 font-jakarta text-sm leading-relaxed mb-5">
                     {service.description}
                   </p>
 
@@ -217,7 +217,7 @@ export default function ServicesSection() {
                     {service.items.map((item) => (
                       <span
                         key={item}
-                        className="px-3 py-1 rounded-lg text-xs font-jakarta font-medium text-slate-900/70 border border-slate-200 bg-white/5"
+                        className="px-3 py-1 rounded-lg text-xs font-jakarta font-medium text-slate-900 dark:text-white/70 border border-slate-200 dark:border-slate-800 bg-white/5"
                       >
                         {item}
                       </span>

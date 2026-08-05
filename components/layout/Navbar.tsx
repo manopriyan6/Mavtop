@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
+import { ThemeToggle } from "@/components/ThemeToggle";
 import { Menu, X, ChevronRight } from "lucide-react";
 
 const navLinks = [
@@ -37,28 +38,17 @@ export default function Navbar() {
         transition={{ duration: 0.7, ease: [0.23, 1, 0.32, 1] }}
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
           scrolled
-            ? "bg-[rgba(19,21,36,0.85)] backdrop-blur-xl border-b border-[rgba(255,255,255,0.06)] shadow-[0_4px_30px_rgba(34,197,94,0.08)]"
+            ? "bg-white dark:bg-[#131524]/90 backdrop-blur-xl border-b border-slate-200 dark:border-slate-800 shadow-sm"
             : "bg-transparent"
         }`}
       >
         <div className="container-custom">
           <div className="flex items-center justify-between h-20 md:h-24">
-            {/* Logo — horizontal rectangle on white card */}
+            {/* Logo */}
             <a href="#home" className="flex items-center group">
-              <div
-                className="relative flex-shrink-0 group-hover:scale-105 transition-transform duration-300"
-                style={{
-                  width: "260px",
-                  height: "78px",
-                }}
-              >
-                <Image
-                  src="/mavtop-tran.png"
-                  alt="Mavtop Technologies"
-                  fill
-                  className="object-contain object-left"
-                  priority
-                />
+              <div className="relative w-[140px] h-[40px] flex items-center justify-center">
+                <Image src="/logo_black.png" alt="Mavtop Logo" fill className="object-contain dark:hidden" priority />
+                <Image src="/logo_white.png" alt="Mavtop Logo" fill className="object-contain hidden dark:block" priority />
               </div>
             </a>
 
@@ -72,8 +62,8 @@ export default function Navbar() {
                   onClick={() => setActiveLink(link.label)}
                   className={`relative px-4 py-2 text-sm font-jakarta font-medium transition-colors duration-200 group ${
                     activeLink === link.label
-                      ? "text-slate-900"
-                      : "text-slate-500 hover:text-slate-900"
+                      ? "text-slate-900 dark:text-white"
+                      : "text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white dark:text-white"
                   }`}
                 >
                   {link.label}
@@ -97,12 +87,13 @@ export default function Navbar() {
                 Get Started
                 <ChevronRight size={14} />
               </a>
+              <ThemeToggle />
               <button
-                className="lg:hidden p-2 text-slate-500 hover:text-slate-900 transition-colors"
+                className={`p-2 rounded-lg transition-colors text-slate-900 dark:text-white hover:bg-slate-100 dark:hover:bg-slate-800 lg:hidden`}
                 onClick={() => setMenuOpen(!menuOpen)}
                 aria-label="Toggle menu"
               >
-                {menuOpen ? <X size={22} /> : <Menu size={22} />}
+                {menuOpen ? <X size={24} /> : <Menu size={24} />}
               </button>
             </div>
           </div>
@@ -125,26 +116,20 @@ export default function Navbar() {
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
               transition={{ duration: 0.35, ease: [0.23, 1, 0.32, 1] }}
-              className="fixed top-0 right-0 bottom-0 w-72 bg-[#0D0D0F] border-l border-[rgba(255,255,255,0.06)] z-50 flex flex-col"
+              className="fixed top-0 right-0 bottom-0 w-72 bg-slate-50 dark:bg-[#0D0D0F] border-l border-slate-200 dark:border-slate-800 z-50 flex flex-col"
             >
-              <div className="flex items-center justify-between p-6 border-b border-[rgba(255,255,255,0.06)]">
-                <div
-                  className="relative"
-                  style={{
-                    width: "200px",
-                    height: "60px",
-                  }}
-                >
-                  <Image
-                    src="/mavtop-tran.png"
-                    alt="Mavtop Technologies"
-                    fill
-                    className="object-contain object-left"
-                  />
+              <div className="flex items-center justify-between p-6 border-b border-slate-200 dark:border-slate-800">
+                <div className="flex items-center gap-3">
+                  <div className="relative w-8 h-8 flex items-center justify-center">
+                    <Image src="/logo-symbol-transparent.png" alt="Mavtop Symbol" fill className="object-contain" priority />
+                  </div>
+                  <span className="font-jakarta font-extrabold text-2xl text-slate-900 dark:text-white tracking-tight mt-1">
+                    Mavtop
+                  </span>
                 </div>
                 <button
                   onClick={() => setMenuOpen(false)}
-                  className="p-2 text-slate-500 hover:text-slate-900"
+                  className="p-2 text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white dark:text-white"
                 >
                   <X size={20} />
                 </button>
@@ -158,14 +143,14 @@ export default function Navbar() {
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: i * 0.05, duration: 0.3 }}
                     onClick={() => setMenuOpen(false)}
-                    className="flex items-center justify-between py-3 px-4 rounded-xl text-slate-500 hover:text-slate-900 hover:bg-white transition-all duration-200 font-jakarta font-medium"
+                    className="flex items-center justify-between py-3 px-4 rounded-xl text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white dark:text-white hover:bg-white dark:bg-[#131524] transition-all duration-200 font-jakarta font-medium"
                   >
                     {link.label}
                     <ChevronRight size={14} className="opacity-40" />
                   </motion.a>
                 ))}
               </nav>
-              <div className="p-6 border-t border-[rgba(255,255,255,0.06)]">
+              <div className="p-6 border-t border-slate-200 dark:border-slate-800">
                 <a
                   href="#contact"
                   onClick={() => setMenuOpen(false)}

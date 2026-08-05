@@ -50,7 +50,7 @@ const socials = [
   {
     label: "X",
     href: "https://twitter.com/mavtoptech",
-    color: "hover:text-slate-900 hover:border-white/30 hover:bg-white/10",
+    color: "hover:text-slate-900 dark:hover:text-white dark:text-white hover:border-slate-300 hover:bg-slate-100",
     icon: (
       <svg viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5">
         <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
@@ -83,7 +83,7 @@ export default function Footer() {
   const scrollToTop = () => window.scrollTo({ top: 0, behavior: "smooth" });
 
   return (
-    <footer className="bg-[#060608]">
+    <footer className="bg-white dark:bg-[#131524] border-t border-slate-200 dark:border-slate-800">
 
       {/* ─── Top gradient line ──────────────────────────────── */}
       <div className="h-[2px] w-full bg-gradient-to-r from-transparent via-brand-blue/60 to-transparent" />
@@ -97,29 +97,19 @@ export default function Footer() {
           {/* ── Brand column ── */}
           <div className="flex-shrink-0 w-full lg:w-64">
             <a href="#home" className="inline-block mb-6 group">
-              <div
-                className="relative transition-transform duration-300 group-hover:scale-105"
-                style={{
-                  width: "300px",
-                  height: "95px",
-                }}
-              >
-                <Image
-                  src="/mavtop-tran.png"
-                  alt="Mavtop Technologies"
-                  fill
-                  className="object-contain object-left"
-                />
+              <div className="relative w-[130px] h-[36px] flex items-center justify-center">
+                <Image src="/logo_black.png" alt="Mavtop Logo" fill className="object-contain dark:hidden" />
+                <Image src="/logo_white.png" alt="Mavtop Logo" fill className="object-contain hidden dark:block" />
               </div>
             </a>
 
-            <p className="text-[#A1A1AA] text-sm font-jakarta leading-relaxed mb-5 max-w-[240px]">
+            <p className="text-slate-700 dark:text-slate-300 text-sm font-jakarta leading-relaxed mb-5 max-w-[240px]">
               Maximum Value + Top Performance. Building the future through AI, software, and cloud innovation.
             </p>
 
             <div className="flex flex-wrap gap-2 mb-6">
               {["AI", "Cloud", "Software", "Automation", "Digital"].map((t) => (
-                <span key={t} className="text-[11px] font-jakarta text-[#71717A] border border-white/8 rounded-full px-3 py-1">
+                <span key={t} className="text-[11px] font-jakarta text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-800 rounded-full px-3 py-1">
                   {t}
                 </span>
               ))}
@@ -135,7 +125,7 @@ export default function Footer() {
                   aria-label={s.label}
                   whileHover={{ scale: 1.1, y: -2 }}
                   whileTap={{ scale: 0.95 }}
-                  className={`w-10 h-10 rounded-xl border border-slate-200 bg-white/[0.03] flex items-center justify-center text-[#71717A] transition-all duration-200 ${s.color}`}
+                  className={`w-10 h-10 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-[#1E2038] flex items-center justify-center text-slate-700 dark:text-slate-300 transition-all duration-200 ${s.color}`}
                 >
                   {s.icon}
                 </motion.a>
@@ -147,7 +137,7 @@ export default function Footer() {
           <div className="flex-1 grid grid-cols-2 md:grid-cols-4 gap-8">
             {Object.entries(footerLinks).map(([section, links]) => (
               <div key={section}>
-                <h4 className="text-xs font-jakarta font-semibold text-slate-900 uppercase tracking-widest mb-5">
+                <h4 className="text-xs font-jakarta font-semibold text-slate-900 dark:text-white uppercase tracking-widest mb-5">
                   {section}
                 </h4>
                 <ul className="space-y-3.5">
@@ -155,7 +145,7 @@ export default function Footer() {
                     <li key={link.label}>
                       <a
                         href={link.href}
-                        className="text-sm font-jakarta text-[#71717A] hover:text-slate-900 transition-colors duration-200"
+                        className="text-sm font-jakarta text-slate-700 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white dark:text-white transition-colors duration-200"
                       >
                         {link.label}
                       </a>
@@ -178,8 +168,8 @@ export default function Footer() {
               <Phone className="w-5 h-5 text-brand-blue" />
             </div>
             <div>
-              <div className="text-[10px] font-jakarta text-[#71717A] uppercase tracking-widest mb-1">Call Us</div>
-              <div className="text-sm font-jakarta text-slate-900">+91 93856 61495</div>
+              <div className="text-[10px] font-jakarta text-slate-700 dark:text-slate-300 uppercase tracking-widest mb-1">Call Us</div>
+              <div className="text-sm font-jakarta text-slate-900 dark:text-white">+91 93856 61495</div>
             </div>
           </a>
 
@@ -192,8 +182,8 @@ export default function Footer() {
               <Mail className="w-5 h-5 text-electric-blue" />
             </div>
             <div>
-              <div className="text-[10px] font-jakarta text-[#71717A] uppercase tracking-widest mb-1">Email Us</div>
-              <div className="text-sm font-jakarta text-slate-900">hello@mavtop.in</div>
+              <div className="text-[10px] font-jakarta text-slate-700 dark:text-slate-300 uppercase tracking-widest mb-1">Email Us</div>
+              <div className="text-sm font-jakarta text-slate-900 dark:text-white">hello@mavtop.in</div>
             </div>
           </a>
 
@@ -208,8 +198,8 @@ export default function Footer() {
               <MapPin className="w-5 h-5 text-purple" />
             </div>
             <div>
-              <div className="text-[10px] font-jakarta text-[#71717A] uppercase tracking-widest mb-1">Visit Us</div>
-              <div className="text-sm font-jakarta text-slate-900 leading-snug">
+              <div className="text-[10px] font-jakarta text-slate-700 dark:text-slate-300 uppercase tracking-widest mb-1">Visit Us</div>
+              <div className="text-sm font-jakarta text-slate-900 dark:text-white leading-snug">
                 293, Permandapatti, K Ichambadi Post<br />
                 Karimangalam Taluk, Dharmapuri – 635202
               </div>
@@ -218,24 +208,16 @@ export default function Footer() {
         </div>
 
         {/* ─── Bottom divider ───────────────────────────────── */}
-        <div className="mt-10 mb-6 h-px bg-white/[0.06]" />
+        <div className="mt-10 mb-6 h-px bg-slate-200" />
 
         {/* ─── Copyright bar ────────────────────────────────── */}
         <div className="flex flex-col sm:flex-row items-center justify-between gap-3">
-          <p className="text-xs font-jakarta text-[#52525B] text-center sm:text-left">
+          <p className="text-sm font-jakarta font-semibold text-slate-800 dark:text-slate-200 text-center sm:text-left">
             © {new Date().getFullYear()} Mavtop Technologies Pvt. Ltd. All rights reserved.
-            <span className="mx-2 text-slate-900/10">·</span>
-            <span className="text-[#3F3F46] italic">Maximum Value + Top Performance · Dharmapuri, Tamil Nadu</span>
+            <span className="mx-2 text-slate-300">·</span>
+            <span className="text-slate-600 dark:text-slate-400 font-medium">Maximum Value + Top Performance · Dharmapuri, Tamil Nadu</span>
           </p>
-          <motion.button
-            onClick={scrollToTop}
-            whileHover={{ y: -2 }}
-            whileTap={{ scale: 0.95 }}
-            className="w-9 h-9 rounded-xl border border-white/8 bg-white/[0.03] flex items-center justify-center text-[#71717A] hover:text-slate-900 hover:border-brand-blue/40 hover:bg-brand-blue/10 transition-all duration-200"
-            aria-label="Scroll to top"
-          >
-            <ArrowUp className="w-4 h-4" />
-          </motion.button>
+          
         </div>
       </div>
     </footer>

@@ -77,7 +77,7 @@ export default function WhyMavtopSection() {
   const isInView = useInView(ref, { once: true, margin: "-80px" });
 
   return (
-    <section id="why-mavtop" className="section-padding relative overflow-hidden bg-[#FAFAFA]" ref={ref}>
+    <section id="why-mavtop" className="section-padding relative overflow-hidden bg-[#FAFAFA] dark:bg-[#0D0D0F]" ref={ref}>
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-electric-blue/20 to-transparent" />
 
       <div
@@ -104,13 +104,13 @@ export default function WhyMavtopSection() {
             <CheckCircle2 size={12} />
             Why Mavtop
           </span>
-          <h2 className="font-grotesk font-bold text-4xl md:text-5xl lg:text-6xl text-slate-900 mt-6 mb-4">
+          <h2 className="font-grotesk font-bold text-4xl md:text-5xl lg:text-6xl text-slate-900 dark:text-white mt-6 mb-4">
             Not Just a Vendor —{" "}
-            <span className="gradient-text-red">A Technology</span>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#007AFF] to-[#5AC8FA]">A Technology</span>
             <br />
             Partner
           </h2>
-          <p className="text-slate-500 font-jakarta text-lg max-w-2xl mx-auto">
+          <p className="text-slate-500 dark:text-slate-400 font-jakarta text-lg max-w-2xl mx-auto">
             We're invested in your success, not just your project. That's the
             difference between a contractor and a technology partner.
           </p>
@@ -130,17 +130,17 @@ export default function WhyMavtopSection() {
                   delay: index * 0.1,
                   ease: [0.23, 1, 0.32, 1],
                 }}
-                className={`bg-white shadow-[0_4px_24px_rgba(0,0,0,0.04)] border border-slate-100 rounded-2xl p-7 relative overflow-hidden group cursor-default`}
-                style={{ borderColor: `${reason.color}15` }}
+                className={`bg-white dark:bg-[#131524] shadow-[0_4px_24px_rgba(0,0,0,0.04)] border-none rounded-2xl p-7 relative overflow-hidden group cursor-default`}
+                
                 whileHover={{
                   y: -5,
-                  boxShadow: `0 20px 50px ${reason.color}15`,
-                  borderColor: `${reason.color}30`,
+                  boxShadow: `0 20px 50px rgba(0,0,0,0.05)`,
+                  borderColor: "transparent",
                   transition: { duration: 0.3 },
                 }}
               >
                 <div
-                  className={`absolute inset-0 bg-gradient-to-br ${reason.gradient} to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-400`}
+                  className={`absolute inset-0 bg-slate-50 dark:bg-[#1E2038] opacity-0 group-hover:opacity-100 transition-opacity duration-400`}
                 />
                 <div className="relative z-10">
                   {/* Icon */}
@@ -154,10 +154,10 @@ export default function WhyMavtopSection() {
                     <Icon size={22} style={{ color: reason.color }} />
                   </div>
 
-                  <h3 className="font-grotesk font-bold text-xl text-slate-900 mb-3">
+                  <h3 className="font-grotesk font-bold text-xl text-slate-900 dark:text-white mb-3">
                     {reason.title}
                   </h3>
-                  <p className="font-jakarta text-slate-500 text-sm leading-relaxed">
+                  <p className="font-jakarta text-slate-500 dark:text-slate-400 text-sm leading-relaxed">
                     {reason.description}
                   </p>
                 </div>
@@ -171,15 +171,15 @@ export default function WhyMavtopSection() {
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.7, delay: 0.4 }}
-          className="bg-white shadow-[0_4px_24px_rgba(0,0,0,0.04)] border border-slate-100 rounded-3xl p-8 md:p-10"
+          className="bg-white dark:bg-[#131524] shadow-[0_4px_24px_rgba(0,0,0,0.04)] border-none rounded-3xl p-8 md:p-10"
           style={{ borderColor: "rgba(34,197,94,0.15)" }}
         >
           <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
             <div>
-              <h3 className="font-grotesk font-bold text-2xl md:text-3xl text-slate-900 mb-2">
+              <h3 className="font-grotesk font-bold text-2xl md:text-3xl text-slate-900 dark:text-white mb-2">
                 Our Commitment to Every Project
               </h3>
-              <p className="text-slate-500 font-jakarta text-sm">
+              <p className="text-slate-500 dark:text-slate-400 font-jakarta text-sm">
                 Standard across all engagements, no matter the size.
               </p>
             </div>
@@ -187,7 +187,7 @@ export default function WhyMavtopSection() {
               {checkItems.map((item) => (
                 <div key={item} className="flex items-center gap-2">
                   <CheckCircle2 size={14} className="text-brand-blue flex-shrink-0" />
-                  <span className="font-jakarta text-sm text-slate-900/80">{item}</span>
+                  <span className="font-jakarta text-sm text-slate-900 dark:text-white/80">{item}</span>
                 </div>
               ))}
             </div>

@@ -26,11 +26,7 @@ const technologies = [
 function TechBadge({ tech }: { tech: (typeof technologies)[0] }) {
   return (
     <div
-      className="flex items-center gap-3 px-5 py-3 rounded-2xl border transition-all duration-300 mx-3 cursor-default group hover:-translate-y-1"
-      style={{
-        background: "rgba(255,255,255,0.03)",
-        borderColor: "rgba(255,255,255,0.08)",
-      }}
+      className="flex items-center gap-3 px-5 py-3 rounded-2xl border bg-white dark:bg-[#131524] border-slate-200 dark:border-slate-800 transition-all duration-300 mx-3 cursor-default group hover:-translate-y-1 shadow-sm"
     >
       {/* Letter icon */}
       <div
@@ -43,7 +39,7 @@ function TechBadge({ tech }: { tech: (typeof technologies)[0] }) {
       >
         {tech.letter}
       </div>
-      <span className="font-jakarta font-semibold text-sm text-slate-900/70 group-hover:text-slate-900 transition-colors whitespace-nowrap">
+      <span className="font-jakarta font-semibold text-sm text-slate-900 dark:text-white/70 group-hover:text-slate-900 dark:hover:text-white dark:text-white transition-colors whitespace-nowrap">
         {tech.name}
       </span>
     </div>
@@ -59,7 +55,7 @@ export default function TechnologiesSection() {
   const isInView = useInView(ref, { once: true, margin: "-80px" });
 
   return (
-    <section className="section-padding relative overflow-hidden bg-[#FAFAFA]" ref={ref}>
+    <section className="section-padding relative overflow-hidden bg-[#FAFAFA] dark:bg-[#0D0D0F]" ref={ref}>
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-brand-blue/20 to-transparent" />
 
       <div className="container-custom relative z-10 mb-16">
@@ -73,23 +69,23 @@ export default function TechnologiesSection() {
             <Layers size={12} />
             Our Tech Stack
           </span>
-          <h2 className="font-grotesk font-bold text-4xl md:text-5xl lg:text-6xl text-slate-900 mt-6 mb-4">
+          <h2 className="font-grotesk font-bold text-4xl md:text-5xl lg:text-6xl text-slate-900 dark:text-white mt-6 mb-4">
             Powered by{" "}
-            <span className="gradient-text-blue">World-Class</span>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#007AFF] to-[#5AC8FA]">World-Class</span>
             <br />
             Technology
           </h2>
-          <p className="text-slate-500 font-jakarta text-lg max-w-xl mx-auto">
+          <p className="text-slate-500 dark:text-slate-400 font-jakarta text-lg max-w-xl mx-auto">
             We select the best tools for every project — no dogma, just results.
           </p>
         </motion.div>
       </div>
 
       {/* Row 1 — left to right */}
-      <div className="relative overflow-hidden mb-4">
+      <div className="relative overflow-hidden mb-4 mt-20">
         {/* Fade edges */}
-        <div className="absolute left-0 top-0 bottom-0 w-24 z-10 bg-gradient-to-r from-background to-transparent pointer-events-none" />
-        <div className="absolute right-0 top-0 bottom-0 w-24 z-10 bg-gradient-to-l from-background to-transparent pointer-events-none" />
+        <div className="absolute left-0 top-0 bottom-0 w-24 z-10 bg-gradient-to-r from-[#FAFAFA] dark:from-[#0D0D0F] to-transparent pointer-events-none" />
+        <div className="absolute right-0 top-0 bottom-0 w-24 z-10 bg-gradient-to-l from-[#FAFAFA] dark:from-[#0D0D0F] to-transparent pointer-events-none" />
 
         <div className="marquee-track">
           {techRow1.map((tech, i) => (
@@ -100,8 +96,8 @@ export default function TechnologiesSection() {
 
       {/* Row 2 — right to left */}
       <div className="relative overflow-hidden">
-        <div className="absolute left-0 top-0 bottom-0 w-24 z-10 bg-gradient-to-r from-background to-transparent pointer-events-none" />
-        <div className="absolute right-0 top-0 bottom-0 w-24 z-10 bg-gradient-to-l from-background to-transparent pointer-events-none" />
+        <div className="absolute left-0 top-0 bottom-0 w-24 z-10 bg-gradient-to-r from-[#FAFAFA] dark:from-[#0D0D0F] to-transparent pointer-events-none" />
+        <div className="absolute right-0 top-0 bottom-0 w-24 z-10 bg-gradient-to-l from-[#FAFAFA] dark:from-[#0D0D0F] to-transparent pointer-events-none" />
 
         <div className="marquee-track marquee-track-reverse">
           {techRow2.map((tech, i) => (
