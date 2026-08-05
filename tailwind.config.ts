@@ -9,10 +9,10 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        background: "#09090B",
-        "brand-navy": "#2D3A4F",
-        "brand-green": "#22C55E",
-        "brand-green-light": "#4ADE80",
+        background: "#131524",
+        "brand-navy": "#1E2038",
+        "brand-blue": "#0348FF",
+        "brand-blue-light": "#90B0F9",
         "electric-blue": "#2563EB",
         "electric-blue-light": "#3B82F6",
         "purple-accent": "#7C3AED",
@@ -24,7 +24,7 @@ const config: Config = {
       },
       fontFamily: {
         grotesk: ["Space Grotesk", "sans-serif"],
-        inter: ["Inter", "sans-serif"],
+        jakarta: ["Plus Jakarta Sans", "sans-serif"],
       },
       animation: {
         "spin-slow": "spin 12s linear infinite",

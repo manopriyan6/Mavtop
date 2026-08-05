@@ -43,7 +43,7 @@ function TechBadge({ tech }: { tech: (typeof technologies)[0] }) {
       >
         {tech.letter}
       </div>
-      <span className="font-inter font-semibold text-sm text-white/70 group-hover:text-white transition-colors whitespace-nowrap">
+      <span className="font-jakarta font-semibold text-sm text-white/70 group-hover:text-white transition-colors whitespace-nowrap">
         {tech.name}
       </span>
     </div>
@@ -60,7 +60,7 @@ export default function TechnologiesSection() {
 
   return (
     <section className="section-padding relative overflow-hidden bg-background" ref={ref}>
-      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-brand-green/20 to-transparent" />
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-brand-blue/20 to-transparent" />
 
       <div className="container-custom relative z-10 mb-16">
         <motion.div
@@ -79,7 +79,7 @@ export default function TechnologiesSection() {
             <br />
             Technology
           </h2>
-          <p className="text-muted font-inter text-lg max-w-xl mx-auto">
+          <p className="text-muted font-jakarta text-lg max-w-xl mx-auto">
             We select the best tools for every project — no dogma, just results.
           </p>
         </motion.div>

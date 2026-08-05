@@ -21,12 +21,12 @@ const products = [
     description:
       "Intelligent customer relationship management with AI insights, automated workflows, and 360° customer views. Turn every interaction into an opportunity.",
     icon: Users,
-    color: "var(--brand-green)",
+    color: "var(--brand-blue)",
     gradientFrom: "from-green-900/40",
     gradientTo: "to-transparent",
     features: ["AI Lead Scoring", "Pipeline Automation", "Real-time Analytics", "WhatsApp Integration"],
     badge: "Flagship Product",
-    badgeColor: "var(--brand-green)",
+    badgeColor: "var(--brand-blue)",
   },
   {
     id: "whatsapp",
@@ -111,7 +111,7 @@ export default function ProductsSection() {
             <br />
             by Enterprises
           </h2>
-          <p className="text-muted font-inter text-lg max-w-2xl mx-auto">
+          <p className="text-muted font-jakarta text-lg max-w-2xl mx-auto">
             Production-ready software products designed for the Indian market —
             and built to scale globally.
           </p>
@@ -176,7 +176,7 @@ export default function ProductsSection() {
                   </p>
 
                   {/* Description */}
-                  <p className="text-muted font-inter text-sm leading-relaxed mb-6">
+                  <p className="text-muted font-jakarta text-sm leading-relaxed mb-6">
                     {product.description}
                   </p>
 
@@ -185,7 +185,7 @@ export default function ProductsSection() {
                     {product.features.map((feature) => (
                       <span
                         key={feature}
-                        className="flex items-center gap-1 px-3 py-1 rounded-lg text-xs font-inter font-medium border"
+                        className="flex items-center gap-1 px-3 py-1 rounded-lg text-xs font-jakarta font-medium border"
                         style={{
                           background: `${product.color}08`,
                           borderColor: `${product.color}25`,
@@ -207,7 +207,7 @@ export default function ProductsSection() {
                       Explore Product <ChevronRight size={14} />
                     </button>
                     <span className="text-muted/40 text-sm">|</span>
-                    <button className="text-muted hover:text-white font-inter text-sm transition-colors">
+                    <button className="text-muted hover:text-white font-jakarta text-sm transition-colors">
                       Request Demo
                     </button>
                   </div>
@@ -224,7 +224,7 @@ export default function ProductsSection() {
           transition={{ duration: 0.6, delay: 0.6 }}
           className="text-center mt-12"
         >
-          <p className="text-muted font-inter text-sm mb-4">
+          <p className="text-muted font-jakarta text-sm mb-4">
             Looking for a custom solution?
           </p>
           <a
@@ -237,7 +237,7 @@ export default function ProductsSection() {
         </motion.div>
       </div>
 
-      <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-brand-green/20 to-transparent" />
+      <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-brand-blue/20 to-transparent" />
     </section>
   );
 }

@@ -18,7 +18,7 @@ const reasons = [
     title: "Maximum Value",
     description:
       "Every rupee you invest delivers measurable returns. We prioritize ROI-driven development and transparent pricing with no hidden costs.",
-    color: "var(--brand-green)",
+    color: "var(--brand-blue)",
     gradient: "from-green-900/20",
   },
   {
@@ -58,7 +58,7 @@ const reasons = [
     title: "24×7 Support",
     description:
       "A dedicated support team available round the clock. No escalation hell — you get direct access to senior engineers when it matters.",
-    color: "var(--brand-green)",
+    color: "var(--brand-blue)",
     gradient: "from-green-900/20",
   },
 ];
@@ -110,7 +110,7 @@ export default function WhyMavtopSection() {
             <br />
             Partner
           </h2>
-          <p className="text-muted font-inter text-lg max-w-2xl mx-auto">
+          <p className="text-muted font-jakarta text-lg max-w-2xl mx-auto">
             We're invested in your success, not just your project. That's the
             difference between a contractor and a technology partner.
           </p>
@@ -157,7 +157,7 @@ export default function WhyMavtopSection() {
                   <h3 className="font-grotesk font-bold text-xl text-white mb-3">
                     {reason.title}
                   </h3>
-                  <p className="font-inter text-muted text-sm leading-relaxed">
+                  <p className="font-jakarta text-muted text-sm leading-relaxed">
                     {reason.description}
                   </p>
                 </div>
@@ -179,15 +179,15 @@ export default function WhyMavtopSection() {
               <h3 className="font-grotesk font-bold text-2xl md:text-3xl text-white mb-2">
                 Our Commitment to Every Project
               </h3>
-              <p className="text-muted font-inter text-sm">
+              <p className="text-muted font-jakarta text-sm">
                 Standard across all engagements, no matter the size.
               </p>
             </div>
             <div className="grid grid-cols-2 gap-3 flex-shrink-0">
               {checkItems.map((item) => (
                 <div key={item} className="flex items-center gap-2">
-                  <CheckCircle2 size={14} className="text-brand-green flex-shrink-0" />
-                  <span className="font-inter text-sm text-white/80">{item}</span>
+                  <CheckCircle2 size={14} className="text-brand-blue flex-shrink-0" />
+                  <span className="font-jakarta text-sm text-white/80">{item}</span>
                 </div>
               ))}
             </div>
@@ -195,7 +195,7 @@ export default function WhyMavtopSection() {
         </motion.div>
       </div>
 
-      <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-brand-green/20 to-transparent" />
+      <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-brand-blue/20 to-transparent" />
     </section>
   );
 }

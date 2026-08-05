@@ -84,7 +84,7 @@ export default function ContactCTASection() {
             <br />
             <span className="gradient-text-red">the Future?</span>
           </h2>
-          <p className="font-inter text-lg md:text-xl text-muted max-w-2xl mx-auto mb-8 leading-relaxed">
+          <p className="font-jakarta text-lg md:text-xl text-muted max-w-2xl mx-auto mb-8 leading-relaxed">
             Let's transform your ideas into world-class digital products.
             Book a free consultation — no commitment required.
           </p>
@@ -93,19 +93,19 @@ export default function ContactCTASection() {
           <div className="flex flex-wrap justify-center gap-3 mb-12">
             <a
               href="tel:+919385661495"
-              className="flex items-center gap-2 px-5 py-2.5 glass-card rounded-xl text-sm font-inter text-white/80 hover:text-white transition-all"
+              className="flex items-center gap-2 px-5 py-2.5 glass-card rounded-xl text-sm font-jakarta text-white/80 hover:text-white transition-all"
             >
-              <Phone size={14} className="text-brand-green" />
+              <Phone size={14} className="text-brand-blue" />
               +91 93856 61495
             </a>
             <a
               href="mailto:hello@mavtop.in"
-              className="flex items-center gap-2 px-5 py-2.5 glass-card rounded-xl text-sm font-inter text-white/80 hover:text-white transition-all"
+              className="flex items-center gap-2 px-5 py-2.5 glass-card rounded-xl text-sm font-jakarta text-white/80 hover:text-white transition-all"
             >
               <Mail size={14} className="text-electric-blue" />
               hello@mavtop.in
             </a>
-            <span className="flex items-center gap-2 px-5 py-2.5 glass-card rounded-xl text-sm font-inter text-white/80">
+            <span className="flex items-center gap-2 px-5 py-2.5 glass-card rounded-xl text-sm font-jakarta text-white/80">
               <MapPin size={14} className="text-purple-accent" />
               Dharmapuri, Tamil Nadu
             </span>
@@ -119,15 +119,15 @@ export default function ContactCTASection() {
             initial={{ opacity: 0, x: -30 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.7, delay: 0.2 }}
-            className="lg:col-span-3 glass-card rounded-3xl p-8 border-brand-green/15"
+            className="lg:col-span-3 glass-card rounded-3xl p-8 border-brand-blue/15"
           >
             {submitted ? (
               <div className="flex flex-col items-center justify-center h-full py-12 text-center">
-                <div className="w-16 h-16 rounded-full bg-brand-green/20 border border-brand-green/30 flex items-center justify-center mb-4">
-                  <Send size={24} className="text-brand-green" />
+                <div className="w-16 h-16 rounded-full bg-brand-blue/20 border border-brand-blue/30 flex items-center justify-center mb-4">
+                  <Send size={24} className="text-brand-blue" />
                 </div>
                 <h3 className="font-grotesk font-bold text-2xl text-white mb-2">Message Sent!</h3>
-                <p className="text-muted font-inter text-sm">
+                <p className="text-muted font-jakarta text-sm">
                   We'll get back to you within 24 hours.
                 </p>
               </div>
@@ -137,14 +137,14 @@ export default function ContactCTASection() {
                   <h3 className="font-grotesk font-bold text-xl text-white mb-1">
                     Start Your Project
                   </h3>
-                  <p className="text-muted font-inter text-sm">
+                  <p className="text-muted font-jakarta text-sm">
                     Fill in the details and we'll reach out within one business day.
                   </p>
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-xs font-inter font-medium text-muted mb-2 uppercase tracking-wider">
+                    <label className="block text-xs font-jakarta font-medium text-muted mb-2 uppercase tracking-wider">
                       Your Name *
                     </label>
                     <input
@@ -153,11 +153,11 @@ export default function ContactCTASection() {
                       value={formState.name}
                       onChange={(e) => setFormState({ ...formState, name: e.target.value })}
                       placeholder="Raj Kumar"
-                      className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-sm font-inter text-white placeholder-white/30 focus:outline-none focus:border-brand-green/50 focus:bg-white/8 transition-all duration-200"
+                      className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-sm font-jakarta text-white placeholder-white/30 focus:outline-none focus:border-brand-blue/50 focus:bg-white/8 transition-all duration-200"
                     />
                   </div>
                   <div>
-                    <label className="block text-xs font-inter font-medium text-muted mb-2 uppercase tracking-wider">
+                    <label className="block text-xs font-jakarta font-medium text-muted mb-2 uppercase tracking-wider">
                       Email Address *
                     </label>
                     <input
@@ -166,14 +166,14 @@ export default function ContactCTASection() {
                       value={formState.email}
                       onChange={(e) => setFormState({ ...formState, email: e.target.value })}
                       placeholder="raj@company.com"
-                      className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-sm font-inter text-white placeholder-white/30 focus:outline-none focus:border-brand-green/50 focus:bg-white/8 transition-all duration-200"
+                      className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-sm font-jakarta text-white placeholder-white/30 focus:outline-none focus:border-brand-blue/50 focus:bg-white/8 transition-all duration-200"
                     />
                   </div>
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-xs font-inter font-medium text-muted mb-2 uppercase tracking-wider">
+                    <label className="block text-xs font-jakarta font-medium text-muted mb-2 uppercase tracking-wider">
                       Phone Number
                     </label>
                     <input
@@ -181,11 +181,11 @@ export default function ContactCTASection() {
                       value={formState.phone}
                       onChange={(e) => setFormState({ ...formState, phone: e.target.value })}
                       placeholder="+91 98765 43210"
-                      className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-sm font-inter text-white placeholder-white/30 focus:outline-none focus:border-brand-green/50 transition-all duration-200"
+                      className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-sm font-jakarta text-white placeholder-white/30 focus:outline-none focus:border-brand-blue/50 transition-all duration-200"
                     />
                   </div>
                   <div>
-                    <label className="block text-xs font-inter font-medium text-muted mb-2 uppercase tracking-wider">
+                    <label className="block text-xs font-jakarta font-medium text-muted mb-2 uppercase tracking-wider">
                       Company Name
                     </label>
                     <input
@@ -193,13 +193,13 @@ export default function ContactCTASection() {
                       value={formState.company}
                       onChange={(e) => setFormState({ ...formState, company: e.target.value })}
                       placeholder="Your Company"
-                      className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-sm font-inter text-white placeholder-white/30 focus:outline-none focus:border-brand-green/50 transition-all duration-200"
+                      className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-sm font-jakarta text-white placeholder-white/30 focus:outline-none focus:border-brand-blue/50 transition-all duration-200"
                     />
                   </div>
                 </div>
 
                 <div>
-                  <label className="block text-xs font-inter font-medium text-muted mb-2 uppercase tracking-wider">
+                  <label className="block text-xs font-jakarta font-medium text-muted mb-2 uppercase tracking-wider">
                     Tell us about your project *
                   </label>
                   <textarea
@@ -208,7 +208,7 @@ export default function ContactCTASection() {
                     value={formState.message}
                     onChange={(e) => setFormState({ ...formState, message: e.target.value })}
                     placeholder="What would you like to build? What's your timeline and budget?"
-                    className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-sm font-inter text-white placeholder-white/30 focus:outline-none focus:border-brand-green/50 transition-all duration-200 resize-none"
+                    className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-sm font-jakarta text-white placeholder-white/30 focus:outline-none focus:border-brand-blue/50 transition-all duration-200 resize-none"
                   />
                 </div>
 
@@ -236,7 +236,7 @@ export default function ContactCTASection() {
                 Our Process
               </h3>
               {[
-                { step: "01", label: "Discovery Call", desc: "We understand your needs", color: "var(--brand-green)" },
+                { step: "01", label: "Discovery Call", desc: "We understand your needs", color: "var(--brand-blue)" },
                 { step: "02", label: "Proposal & Quote", desc: "Transparent pricing within 48h", color: "#2563EB" },
                 { step: "03", label: "Kickoff Sprint", desc: "Design + architecture phase", color: "#7C3AED" },
                 { step: "04", label: "Build & Deliver", desc: "Agile sprints, weekly demos", color: "#059669" },
@@ -254,7 +254,7 @@ export default function ContactCTASection() {
                   </div>
                   <div>
                     <div className="font-grotesk font-semibold text-sm text-white">{item.label}</div>
-                    <div className="font-inter text-xs text-muted">{item.desc}</div>
+                    <div className="font-jakarta text-xs text-muted">{item.desc}</div>
                   </div>
                 </div>
               ))}
@@ -267,18 +267,18 @@ export default function ContactCTASection() {
             >
               <div className="absolute inset-0 bg-gradient-to-br from-green-900/20 to-transparent" />
               <div className="relative z-10">
-                <div className="w-10 h-10 rounded-xl bg-brand-green/20 border border-brand-green/30 flex items-center justify-center mb-4">
-                  <Calendar size={18} className="text-brand-green" />
+                <div className="w-10 h-10 rounded-xl bg-brand-blue/20 border border-brand-blue/30 flex items-center justify-center mb-4">
+                  <Calendar size={18} className="text-brand-blue" />
                 </div>
                 <h3 className="font-grotesk font-bold text-white text-lg mb-2">
                   Free 30-min Call
                 </h3>
-                <p className="font-inter text-muted text-sm mb-4">
+                <p className="font-jakarta text-muted text-sm mb-4">
                   Book a strategy call with our tech lead. No sales pitch — just a real conversation about your goals.
                 </p>
                 <a
                   href="mailto:hello@mavtop.in?subject=Book%20a%20Free%20Consultation"
-                  className="flex items-center gap-2 text-sm font-grotesk font-bold text-brand-green hover:gap-3 transition-all duration-200"
+                  className="flex items-center gap-2 text-sm font-grotesk font-bold text-brand-blue hover:gap-3 transition-all duration-200"
                 >
                   Book Now <ChevronRight size={14} />
                 </a>

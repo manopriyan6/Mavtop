@@ -21,7 +21,7 @@ const testimonials = [
     role: "CTO",
     company: "FinServe Solutions",
     initial: "F",
-    companyColor: "var(--brand-green)",
+    companyColor: "var(--brand-blue)",
     quote:
       "Their Mavtop CRM integration with our existing stack was seamless. The AI lead scoring alone improved our conversion rate by 40%. The support team is incredible — always available, always helpful.",
     stars: 5,
@@ -123,7 +123,7 @@ export default function TestimonialsSection() {
             Trusted by{" "}
             <span className="gradient-text-red">Industry</span> Leaders
           </h2>
-          <p className="text-muted font-inter text-lg max-w-xl mx-auto">
+          <p className="text-muted font-jakarta text-lg max-w-xl mx-auto">
             Real results from real businesses across India.
           </p>
         </motion.div>
@@ -182,7 +182,7 @@ export default function TestimonialsSection() {
                   </div>
 
                   {/* Quote */}
-                  <blockquote className="font-inter text-white/85 text-base md:text-lg leading-relaxed mb-8 italic">
+                  <blockquote className="font-jakarta text-white/85 text-base md:text-lg leading-relaxed mb-8 italic">
                     "{data.quote}"
                   </blockquote>
 
@@ -200,7 +200,7 @@ export default function TestimonialsSection() {
                     </div>
                     <div>
                       <div className="font-grotesk font-bold text-white">{data.name}</div>
-                      <div className="font-inter text-sm text-muted">
+                      <div className="font-jakarta text-sm text-muted">
                         {data.role}, {data.company}
                       </div>
                     </div>
@@ -214,7 +214,7 @@ export default function TestimonialsSection() {
           <div className="flex items-center justify-center gap-4 mt-10">
             <button
               onClick={prev}
-              className="w-11 h-11 rounded-full glass-card flex items-center justify-center text-muted hover:text-white transition-all duration-200 hover:border-brand-green/40 hover:bg-brand-green/10"
+              className="w-11 h-11 rounded-full glass-card flex items-center justify-center text-muted hover:text-white transition-all duration-200 hover:border-brand-blue/40 hover:bg-brand-blue/10"
             >
               <ChevronLeft size={18} />
             </button>
@@ -225,7 +225,7 @@ export default function TestimonialsSection() {
                   key={i}
                   onClick={() => setActive(i)}
                   className={`h-1.5 rounded-full transition-all duration-300 ${
-                    i === active ? "w-8 bg-brand-green" : "w-2 bg-white/20 hover:bg-white/40"
+                    i === active ? "w-8 bg-brand-blue" : "w-2 bg-white/20 hover:bg-white/40"
                   }`}
                 />
               ))}
@@ -233,7 +233,7 @@ export default function TestimonialsSection() {
 
             <button
               onClick={next}
-              className="w-11 h-11 rounded-full glass-card flex items-center justify-center text-muted hover:text-white transition-all duration-200 hover:border-brand-green/40 hover:bg-brand-green/10"
+              className="w-11 h-11 rounded-full glass-card flex items-center justify-center text-muted hover:text-white transition-all duration-200 hover:border-brand-blue/40 hover:bg-brand-blue/10"
             >
               <ChevronRight size={18} />
             </button>
@@ -241,7 +241,7 @@ export default function TestimonialsSection() {
         </div>
       </div>
 
-      <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-brand-green/20 to-transparent" />
+      <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-brand-blue/20 to-transparent" />
     </section>
   );
 }

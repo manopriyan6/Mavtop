@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -9,10 +9,10 @@
    CSS VARIABLES — MAVTOP DESIGN SYSTEM
    ============================================================ */
 :root {
-  --bg: #09090B;
-  --brand-navy: #2D3A4F;
-  --brand-green: #22C55E;
-  --brand-green-light: #4ADE80;
+  --bg: #131524;
+  --brand-navy: #1E2038;
+  --brand-blue: #0348FF;
+  --brand-blue-light: #90B0F9;
   --electric-blue: #2563EB;
   --electric-blue-light: #3B82F6;
   --purple: #7C3AED;
@@ -56,7 +56,7 @@ body {
   background: #09090B;
 }
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, var(--brand-green), #7C3AED);
+  background: linear-gradient(180deg, var(--brand-blue), #7C3AED);
   border-radius: 3px;
 }
 
@@ -121,7 +121,7 @@ h1, h2, h3, h4, h5, h6 {
    GLOW BUTTONS
    ============================================================ */
 .btn-primary {
-  background: linear-gradient(135deg, var(--brand-green), var(--brand-green-light));
+  background: linear-gradient(135deg, var(--brand-blue), var(--brand-blue-light));
   border: none;
   color: white;
   font-family: 'Space Grotesk', sans-serif;
@@ -208,7 +208,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .gradient-text-mixed {
-  background: linear-gradient(135deg, var(--brand-green-light) 0%, #FFFFFF 40%, #3B82F6 100%);
+  background: linear-gradient(135deg, var(--brand-blue-light) 0%, #FFFFFF 40%, #3B82F6 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -297,7 +297,7 @@ h1, h2, h3, h4, h5, h6 {
 .stat-number {
   font-family: 'Space Grotesk', sans-serif;
   font-weight: 800;
-  background: linear-gradient(135deg, #FFFFFF, var(--brand-green));
+  background: linear-gradient(135deg, #FFFFFF, var(--brand-blue));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;

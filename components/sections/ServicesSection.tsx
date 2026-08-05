@@ -21,7 +21,7 @@ const services = [
   {
     icon: Brain,
     category: "AI Solutions",
-    color: "var(--brand-green)",
+    color: "var(--brand-blue)",
     gradient: "from-green-900/30 to-transparent",
     borderColor: "rgba(34,197,94,0.2)",
     glowColor: "rgba(34,197,94,0.15)",
@@ -81,7 +81,7 @@ const services = [
   {
     icon: Zap,
     category: "Digital Transformation",
-    color: "var(--brand-green)",
+    color: "var(--brand-blue)",
     gradient: "from-green-900/20 to-blue-900/20",
     borderColor: "rgba(34,197,94,0.15)",
     glowColor: "rgba(34,197,94,0.1)",
@@ -116,7 +116,7 @@ export default function ServicesSection() {
   return (
     <section id="services" className="section-padding relative overflow-hidden bg-background">
       {/* Section background accent */}
-      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-brand-green/30 to-transparent" />
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-brand-blue/30 to-transparent" />
       <div
         className="aurora-blob"
         style={{
@@ -147,7 +147,7 @@ export default function ServicesSection() {
             <br />
             Services
           </h2>
-          <p className="text-muted font-inter text-lg max-w-2xl mx-auto">
+          <p className="text-muted font-jakarta text-lg max-w-2xl mx-auto">
             From AI-powered automation to enterprise cloud platforms — we build
             everything your business needs to lead in the digital era.
           </p>
@@ -208,7 +208,7 @@ export default function ServicesSection() {
                   </h3>
 
                   {/* Description */}
-                  <p className="text-muted font-inter text-sm leading-relaxed mb-5">
+                  <p className="text-muted font-jakarta text-sm leading-relaxed mb-5">
                     {service.description}
                   </p>
 
@@ -217,7 +217,7 @@ export default function ServicesSection() {
                     {service.items.map((item) => (
                       <span
                         key={item}
-                        className="px-3 py-1 rounded-lg text-xs font-inter font-medium text-white/70 border border-white/10 bg-white/5"
+                        className="px-3 py-1 rounded-lg text-xs font-jakarta font-medium text-white/70 border border-white/10 bg-white/5"
                       >
                         {item}
                       </span>

@@ -44,7 +44,7 @@ const stats = [
     suffix: "%",
     label: "System Uptime",
     sublabel: "Guaranteed SLA",
-    color: "var(--brand-green)",
+    color: "var(--brand-blue)",
   },
   {
     value: 500,
@@ -163,7 +163,7 @@ export default function StatsSection() {
               <div className="font-grotesk font-bold text-white text-sm md:text-base mb-1">
                 {stat.label}
               </div>
-              <div className="text-muted font-inter text-xs">{stat.sublabel}</div>
+              <div className="text-muted font-jakarta text-xs">{stat.sublabel}</div>
 
               {/* Bottom glow line */}
               <div

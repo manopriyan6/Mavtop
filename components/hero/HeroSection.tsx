@@ -142,7 +142,7 @@ export default function HeroSection() {
           className="flex justify-center mb-8"
         >
           <span className="section-label">
-            <span className="w-1.5 h-1.5 bg-brand-green rounded-full animate-pulse" />
+            <span className="w-1.5 h-1.5 bg-brand-blue rounded-full animate-pulse" />
             Chennai · Tamil Nadu · India
           </span>
         </motion.div>
@@ -168,7 +168,7 @@ export default function HeroSection() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.65 }}
-          className="text-base md:text-lg text-muted font-inter max-w-2xl mx-auto mb-12 leading-relaxed"
+          className="text-base md:text-lg text-muted font-jakarta max-w-2xl mx-auto mb-12 leading-relaxed"
         >
           We build AI-powered software, enterprise automation, cloud platforms
           and digital experiences that help businesses scale faster.

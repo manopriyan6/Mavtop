@@ -8,23 +8,23 @@ export const metadata: Metadata = {
 
 export default function PrivacyPolicyPage() {
   return (
-    <main className="min-h-screen bg-[#09090B] text-white">
+    <main className="min-h-screen bg-[#131524] text-white">
       {/* Header */}
       <div className="border-b border-white/6">
         <div className="max-w-4xl mx-auto px-6 py-6 flex items-center justify-between">
           <Link href="/" className="text-sm text-[#A1A1AA] hover:text-white transition-colors">
             ← Back to Home
           </Link>
-          <span className="text-xs text-[#52525B] font-inter">Last updated: July 2025</span>
+          <span className="text-xs text-[#52525B] font-jakarta">Last updated: July 2025</span>
         </div>
       </div>
 
       {/* Content */}
       <div className="max-w-4xl mx-auto px-6 py-16">
         <div className="mb-12">
-          <span className="text-xs font-inter text-brand-green uppercase tracking-widest mb-4 block">Legal</span>
+          <span className="text-xs font-jakarta text-brand-blue uppercase tracking-widest mb-4 block">Legal</span>
           <h1 className="font-grotesk font-bold text-4xl md:text-5xl text-white mb-4">Privacy Policy</h1>
-          <p className="text-[#A1A1AA] font-inter text-lg">
+          <p className="text-[#A1A1AA] font-jakarta text-lg">
             Mavtop Technologies Pvt. Ltd. ("we", "our", or "us") is committed to protecting your privacy. This policy explains how we collect, use, disclose, and safeguard your information when you visit our website or use our services.
           </p>
         </div>
@@ -79,13 +79,13 @@ export default function PrivacyPolicyPage() {
           ].map((section) => (
             <div key={section.title} className="border-b border-white/5 pb-8">
               <h2 className="font-grotesk font-semibold text-xl text-white mb-3">{section.title}</h2>
-              <p className="text-[#A1A1AA] font-inter text-sm leading-relaxed whitespace-pre-line">{section.content}</p>
+              <p className="text-[#A1A1AA] font-jakarta text-sm leading-relaxed whitespace-pre-line">{section.content}</p>
             </div>
           ))}
         </div>
 
         <div className="mt-12 p-6 rounded-2xl border border-white/6 bg-white/[0.02]">
-          <p className="text-[#71717A] font-inter text-sm">
+          <p className="text-[#71717A] font-jakarta text-sm">
             By using our website or services, you agree to this Privacy Policy. We may update this policy periodically.
             Continued use of our services after changes constitutes acceptance of the updated policy.
           </p>

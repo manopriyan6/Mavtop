@@ -37,7 +37,7 @@ export default function Navbar() {
         transition={{ duration: 0.7, ease: [0.23, 1, 0.32, 1] }}
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
           scrolled
-            ? "bg-[rgba(9,9,11,0.85)] backdrop-blur-xl border-b border-[rgba(255,255,255,0.06)] shadow-[0_4px_30px_rgba(34,197,94,0.08)]"
+            ? "bg-[rgba(19,21,36,0.85)] backdrop-blur-xl border-b border-[rgba(255,255,255,0.06)] shadow-[0_4px_30px_rgba(34,197,94,0.08)]"
             : "bg-transparent"
         }`}
       >
@@ -70,7 +70,7 @@ export default function Navbar() {
                   key={link.label}
                   href={link.href}
                   onClick={() => setActiveLink(link.label)}
-                  className={`relative px-4 py-2 text-sm font-inter font-medium transition-colors duration-200 group ${
+                  className={`relative px-4 py-2 text-sm font-jakarta font-medium transition-colors duration-200 group ${
                     activeLink === link.label
                       ? "text-white"
                       : "text-muted hover:text-white"
@@ -78,7 +78,7 @@ export default function Navbar() {
                 >
                   {link.label}
                   <span
-                    className={`absolute bottom-0 left-4 right-4 h-px bg-gradient-to-r from-brand-green to-electric-blue transition-all duration-300 ${
+                    className={`absolute bottom-0 left-4 right-4 h-px bg-gradient-to-r from-brand-blue to-electric-blue transition-all duration-300 ${
                       activeLink === link.label
                         ? "opacity-100"
                         : "opacity-0 group-hover:opacity-60"
@@ -158,7 +158,7 @@ export default function Navbar() {
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: i * 0.05, duration: 0.3 }}
                     onClick={() => setMenuOpen(false)}
-                    className="flex items-center justify-between py-3 px-4 rounded-xl text-muted hover:text-white hover:bg-glass-bg transition-all duration-200 font-inter font-medium"
+                    className="flex items-center justify-between py-3 px-4 rounded-xl text-muted hover:text-white hover:bg-glass-bg transition-all duration-200 font-jakarta font-medium"
                   >
                     {link.label}
                     <ChevronRight size={14} className="opacity-40" />
