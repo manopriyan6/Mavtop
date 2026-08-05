@@ -60,7 +60,7 @@ export default function TechnologiesSection() {
 
   return (
     <section className="section-padding relative overflow-hidden bg-background" ref={ref}>
-      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-brand-red/20 to-transparent" />
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-brand-green/20 to-transparent" />
 
       <div className="container-custom relative z-10 mb-16">
         <motion.div

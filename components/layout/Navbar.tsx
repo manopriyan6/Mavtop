@@ -42,14 +42,14 @@ export default function Navbar() {
         }`}
       >
         <div className="container-custom">
-          <div className="flex items-center justify-between h-16 md:h-20">
+          <div className="flex items-center justify-between h-20 md:h-24">
             {/* Logo — horizontal rectangle on white card */}
             <a href="#home" className="flex items-center group">
               <div
                 className="relative flex-shrink-0 group-hover:scale-105 transition-transform duration-300"
                 style={{
-                  width: "200px",
-                  height: "60px",
+                  width: "260px",
+                  height: "78px",
                 }}
               >
                 <Image
@@ -78,7 +78,7 @@ export default function Navbar() {
                 >
                   {link.label}
                   <span
-                    className={`absolute bottom-0 left-4 right-4 h-px bg-gradient-to-r from-brand-red to-electric-blue transition-all duration-300 ${
+                    className={`absolute bottom-0 left-4 right-4 h-px bg-gradient-to-r from-brand-green to-electric-blue transition-all duration-300 ${
                       activeLink === link.label
                         ? "opacity-100"
                         : "opacity-0 group-hover:opacity-60"
@@ -131,8 +131,8 @@ export default function Navbar() {
                 <div
                   className="relative"
                   style={{
-                    width: "180px",
-                    height: "54px",
+                    width: "200px",
+                    height: "60px",
                   }}
                 >
                   <Image

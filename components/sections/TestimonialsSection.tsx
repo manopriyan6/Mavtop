@@ -214,7 +214,7 @@ export default function TestimonialsSection() {
           <div className="flex items-center justify-center gap-4 mt-10">
             <button
               onClick={prev}
-              className="w-11 h-11 rounded-full glass-card flex items-center justify-center text-muted hover:text-white transition-all duration-200 hover:border-brand-red/40 hover:bg-brand-red/10"
+              className="w-11 h-11 rounded-full glass-card flex items-center justify-center text-muted hover:text-white transition-all duration-200 hover:border-brand-green/40 hover:bg-brand-green/10"
             >
               <ChevronLeft size={18} />
             </button>
@@ -225,7 +225,7 @@ export default function TestimonialsSection() {
                   key={i}
                   onClick={() => setActive(i)}
                   className={`h-1.5 rounded-full transition-all duration-300 ${
-                    i === active ? "w-8 bg-brand-red" : "w-2 bg-white/20 hover:bg-white/40"
+                    i === active ? "w-8 bg-brand-green" : "w-2 bg-white/20 hover:bg-white/40"
                   }`}
                 />
               ))}
@@ -233,7 +233,7 @@ export default function TestimonialsSection() {
 
             <button
               onClick={next}
-              className="w-11 h-11 rounded-full glass-card flex items-center justify-center text-muted hover:text-white transition-all duration-200 hover:border-brand-red/40 hover:bg-brand-red/10"
+              className="w-11 h-11 rounded-full glass-card flex items-center justify-center text-muted hover:text-white transition-all duration-200 hover:border-brand-green/40 hover:bg-brand-green/10"
             >
               <ChevronRight size={18} />
             </button>
@@ -241,7 +241,7 @@ export default function TestimonialsSection() {
         </div>
       </div>
 
-      <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-brand-red/20 to-transparent" />
+      <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-brand-green/20 to-transparent" />
     </section>
   );
 }

@@ -186,7 +186,7 @@ export default function WhyMavtopSection() {
             <div className="grid grid-cols-2 gap-3 flex-shrink-0">
               {checkItems.map((item) => (
                 <div key={item} className="flex items-center gap-2">
-                  <CheckCircle2 size={14} className="text-brand-red flex-shrink-0" />
+                  <CheckCircle2 size={14} className="text-brand-green flex-shrink-0" />
                   <span className="font-inter text-sm text-white/80">{item}</span>
                 </div>
               ))}
@@ -195,7 +195,7 @@ export default function WhyMavtopSection() {
         </motion.div>
       </div>
 
-      <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-brand-red/20 to-transparent" />
+      <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-brand-green/20 to-transparent" />
     </section>
   );
 }

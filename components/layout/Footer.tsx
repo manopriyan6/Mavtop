@@ -86,7 +86,7 @@ export default function Footer() {
     <footer className="bg-[#060608]">
 
       {/* ─── Top gradient line ──────────────────────────────── */}
-      <div className="h-[2px] w-full bg-gradient-to-r from-transparent via-brand-red/60 to-transparent" />
+      <div className="h-[2px] w-full bg-gradient-to-r from-transparent via-brand-green/60 to-transparent" />
 
       {/* ─── Main grid ─────────────────────────────────────── */}
       <div className="max-w-7xl mx-auto px-6 lg:px-8 pt-16 pb-10">
@@ -100,8 +100,8 @@ export default function Footer() {
               <div
                 className="relative transition-transform duration-300 group-hover:scale-105"
                 style={{
-                  width: "240px",
-                  height: "76px",
+                  width: "300px",
+                  height: "95px",
                 }}
               >
                 <Image
@@ -172,10 +172,10 @@ export default function Footer() {
           {/* Phone */}
           <a
             href="tel:+919385661495"
-            className="flex items-center gap-4 p-5 rounded-2xl border border-white/6 bg-white/[0.02] hover:bg-white/[0.04] hover:border-brand-red/20 transition-all duration-200 group"
+            className="flex items-center gap-4 p-5 rounded-2xl border border-white/6 bg-white/[0.02] hover:bg-white/[0.04] hover:border-brand-green/20 transition-all duration-200 group"
           >
-            <div className="w-11 h-11 rounded-xl bg-brand-red/10 border border-brand-red/25 flex items-center justify-center flex-shrink-0">
-              <Phone className="w-5 h-5 text-brand-red" />
+            <div className="w-11 h-11 rounded-xl bg-brand-green/10 border border-brand-green/25 flex items-center justify-center flex-shrink-0">
+              <Phone className="w-5 h-5 text-brand-green" />
             </div>
             <div>
               <div className="text-[10px] font-inter text-[#71717A] uppercase tracking-widest mb-1">Call Us</div>
@@ -231,7 +231,7 @@ export default function Footer() {
             onClick={scrollToTop}
             whileHover={{ y: -2 }}
             whileTap={{ scale: 0.95 }}
-            className="w-9 h-9 rounded-xl border border-white/8 bg-white/[0.03] flex items-center justify-center text-[#71717A] hover:text-white hover:border-brand-red/40 hover:bg-brand-red/10 transition-all duration-200"
+            className="w-9 h-9 rounded-xl border border-white/8 bg-white/[0.03] flex items-center justify-center text-[#71717A] hover:text-white hover:border-brand-green/40 hover:bg-brand-green/10 transition-all duration-200"
             aria-label="Scroll to top"
           >
             <ArrowUp className="w-4 h-4" />

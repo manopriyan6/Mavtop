@@ -20,7 +20,7 @@ export default function ShippingDeliveryPolicyPage() {
 
       <div className="max-w-4xl mx-auto px-6 py-16">
         <div className="mb-12">
-          <span className="text-xs font-inter text-brand-red uppercase tracking-widest mb-4 block">Legal</span>
+          <span className="text-xs font-inter text-brand-green uppercase tracking-widest mb-4 block">Legal</span>
           <h1 className="font-grotesk font-bold text-4xl md:text-5xl text-white mb-4">Shipping & Delivery Policy</h1>
           <p className="text-[#A1A1AA] font-inter text-lg">
             Information regarding the delivery of our software products and digital services.

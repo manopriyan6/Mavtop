@@ -95,7 +95,7 @@ export default function ContactCTASection() {
               href="tel:+919385661495"
               className="flex items-center gap-2 px-5 py-2.5 glass-card rounded-xl text-sm font-inter text-white/80 hover:text-white transition-all"
             >
-              <Phone size={14} className="text-brand-red" />
+              <Phone size={14} className="text-brand-green" />
               +91 93856 61495
             </a>
             <a
@@ -119,12 +119,12 @@ export default function ContactCTASection() {
             initial={{ opacity: 0, x: -30 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.7, delay: 0.2 }}
-            className="lg:col-span-3 glass-card rounded-3xl p-8 border-brand-red/15"
+            className="lg:col-span-3 glass-card rounded-3xl p-8 border-brand-green/15"
           >
             {submitted ? (
               <div className="flex flex-col items-center justify-center h-full py-12 text-center">
-                <div className="w-16 h-16 rounded-full bg-brand-red/20 border border-brand-red/30 flex items-center justify-center mb-4">
-                  <Send size={24} className="text-brand-red" />
+                <div className="w-16 h-16 rounded-full bg-brand-green/20 border border-brand-green/30 flex items-center justify-center mb-4">
+                  <Send size={24} className="text-brand-green" />
                 </div>
                 <h3 className="font-grotesk font-bold text-2xl text-white mb-2">Message Sent!</h3>
                 <p className="text-muted font-inter text-sm">
@@ -153,7 +153,7 @@ export default function ContactCTASection() {
                       value={formState.name}
                       onChange={(e) => setFormState({ ...formState, name: e.target.value })}
                       placeholder="Raj Kumar"
-                      className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-sm font-inter text-white placeholder-white/30 focus:outline-none focus:border-brand-red/50 focus:bg-white/8 transition-all duration-200"
+                      className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-sm font-inter text-white placeholder-white/30 focus:outline-none focus:border-brand-green/50 focus:bg-white/8 transition-all duration-200"
                     />
                   </div>
                   <div>
@@ -166,7 +166,7 @@ export default function ContactCTASection() {
                       value={formState.email}
                       onChange={(e) => setFormState({ ...formState, email: e.target.value })}
                       placeholder="raj@company.com"
-                      className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-sm font-inter text-white placeholder-white/30 focus:outline-none focus:border-brand-red/50 focus:bg-white/8 transition-all duration-200"
+                      className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-sm font-inter text-white placeholder-white/30 focus:outline-none focus:border-brand-green/50 focus:bg-white/8 transition-all duration-200"
                     />
                   </div>
                 </div>
@@ -181,7 +181,7 @@ export default function ContactCTASection() {
                       value={formState.phone}
                       onChange={(e) => setFormState({ ...formState, phone: e.target.value })}
                       placeholder="+91 98765 43210"
-                      className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-sm font-inter text-white placeholder-white/30 focus:outline-none focus:border-brand-red/50 transition-all duration-200"
+                      className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-sm font-inter text-white placeholder-white/30 focus:outline-none focus:border-brand-green/50 transition-all duration-200"
                     />
                   </div>
                   <div>
@@ -193,7 +193,7 @@ export default function ContactCTASection() {
                       value={formState.company}
                       onChange={(e) => setFormState({ ...formState, company: e.target.value })}
                       placeholder="Your Company"
-                      className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-sm font-inter text-white placeholder-white/30 focus:outline-none focus:border-brand-red/50 transition-all duration-200"
+                      className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-sm font-inter text-white placeholder-white/30 focus:outline-none focus:border-brand-green/50 transition-all duration-200"
                     />
                   </div>
                 </div>
@@ -208,7 +208,7 @@ export default function ContactCTASection() {
                     value={formState.message}
                     onChange={(e) => setFormState({ ...formState, message: e.target.value })}
                     placeholder="What would you like to build? What's your timeline and budget?"
-                    className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-sm font-inter text-white placeholder-white/30 focus:outline-none focus:border-brand-red/50 transition-all duration-200 resize-none"
+                    className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-sm font-inter text-white placeholder-white/30 focus:outline-none focus:border-brand-green/50 transition-all duration-200 resize-none"
                   />
                 </div>
 
@@ -267,8 +267,8 @@ export default function ContactCTASection() {
             >
               <div className="absolute inset-0 bg-gradient-to-br from-red-900/20 to-transparent" />
               <div className="relative z-10">
-                <div className="w-10 h-10 rounded-xl bg-brand-red/20 border border-brand-red/30 flex items-center justify-center mb-4">
-                  <Calendar size={18} className="text-brand-red" />
+                <div className="w-10 h-10 rounded-xl bg-brand-green/20 border border-brand-green/30 flex items-center justify-center mb-4">
+                  <Calendar size={18} className="text-brand-green" />
                 </div>
                 <h3 className="font-grotesk font-bold text-white text-lg mb-2">
                   Free 30-min Call
@@ -278,7 +278,7 @@ export default function ContactCTASection() {
                 </p>
                 <a
                   href="mailto:hello@mavtop.in?subject=Book%20a%20Free%20Consultation"
-                  className="flex items-center gap-2 text-sm font-grotesk font-bold text-brand-red hover:gap-3 transition-all duration-200"
+                  className="flex items-center gap-2 text-sm font-grotesk font-bold text-brand-green hover:gap-3 transition-all duration-200"
                 >
                   Book Now <ChevronRight size={14} />
                 </a>

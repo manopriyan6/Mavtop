@@ -20,7 +20,7 @@ export default function RefundPolicyPage() {
 
       <div className="max-w-4xl mx-auto px-6 py-16">
         <div className="mb-12">
-          <span className="text-xs font-inter text-brand-red uppercase tracking-widest mb-4 block">Legal</span>
+          <span className="text-xs font-inter text-brand-green uppercase tracking-widest mb-4 block">Legal</span>
           <h1 className="font-grotesk font-bold text-4xl md:text-5xl text-white mb-4">Refund & Cancellation Policy</h1>
           <p className="text-[#A1A1AA] font-inter text-lg">
             This policy outlines our strict guidelines for refunds and cancellations, as required by payment processing regulations.
@@ -69,11 +69,11 @@ export default function RefundPolicyPage() {
           ))}
         </div>
 
-        <div className="mt-12 p-6 rounded-2xl border border-brand-red/15 bg-brand-red/5">
+        <div className="mt-12 p-6 rounded-2xl border border-brand-green/15 bg-brand-green/5">
           <p className="text-[#A1A1AA] font-inter text-sm">
             <span className="text-white font-semibold">Need help?</span> Contact our billing support at{" "}
-            <a href="mailto:hello@mavtop.in" className="text-brand-red hover:underline">hello@mavtop.in</a>{" "}
-            or call <a href="tel:+919385661495" className="text-brand-red hover:underline">+91 93856 61495</a>.
+            <a href="mailto:hello@mavtop.in" className="text-brand-green hover:underline">hello@mavtop.in</a>{" "}
+            or call <a href="tel:+919385661495" className="text-brand-green hover:underline">+91 93856 61495</a>.
           </p>
         </div>
       </div>

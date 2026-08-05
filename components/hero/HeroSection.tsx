@@ -142,7 +142,7 @@ export default function HeroSection() {
           className="flex justify-center mb-8"
         >
           <span className="section-label">
-            <span className="w-1.5 h-1.5 bg-brand-red rounded-full animate-pulse" />
+            <span className="w-1.5 h-1.5 bg-brand-green rounded-full animate-pulse" />
             Chennai · Tamil Nadu · India
           </span>
         </motion.div>
@@ -230,7 +230,7 @@ export default function HeroSection() {
         transition={{ delay: 2, duration: 1 }}
         className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
       >
-        <div className="w-px h-12 bg-gradient-to-b from-transparent via-brand-red to-transparent animate-pulse" />
+        <div className="w-px h-12 bg-gradient-to-b from-transparent via-brand-green to-transparent animate-pulse" />
         <span className="text-xs text-muted font-inter tracking-widest">SCROLL</span>
       </motion.div>
     </section>

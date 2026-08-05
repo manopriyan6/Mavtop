@@ -22,7 +22,7 @@ export default function PrivacyPolicyPage() {
       {/* Content */}
       <div className="max-w-4xl mx-auto px-6 py-16">
         <div className="mb-12">
-          <span className="text-xs font-inter text-brand-red uppercase tracking-widest mb-4 block">Legal</span>
+          <span className="text-xs font-inter text-brand-green uppercase tracking-widest mb-4 block">Legal</span>
           <h1 className="font-grotesk font-bold text-4xl md:text-5xl text-white mb-4">Privacy Policy</h1>
           <p className="text-[#A1A1AA] font-inter text-lg">
             Mavtop Technologies Pvt. Ltd. ("we", "our", or "us") is committed to protecting your privacy. This policy explains how we collect, use, disclose, and safeguard your information when you visit our website or use our services.

@@ -116,7 +116,7 @@ export default function ServicesSection() {
   return (
     <section id="services" className="section-padding relative overflow-hidden bg-background">
       {/* Section background accent */}
-      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-brand-red/30 to-transparent" />
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-brand-green/30 to-transparent" />
       <div
         className="aurora-blob"
         style={{
