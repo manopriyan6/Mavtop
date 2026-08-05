@@ -172,7 +172,7 @@ export default function Footer() {
           {/* Phone */}
           <a
             href="tel:+919385661495"
-            className="flex items-center gap-4 p-5 rounded-2xl border border-white/6 bg-white/[0.02] hover:bg-white/[0.04] hover:border-brand-green/20 transition-all duration-200 group"
+            className="flex items-center gap-4 py-2 transition-opacity duration-200 hover:opacity-80 group"
           >
             <div className="w-11 h-11 rounded-xl bg-brand-green/10 border border-brand-green/25 flex items-center justify-center flex-shrink-0">
               <Phone className="w-5 h-5 text-brand-green" />
@@ -186,7 +186,7 @@ export default function Footer() {
           {/* Email */}
           <a
             href="mailto:hello@mavtop.in"
-            className="flex items-center gap-4 p-5 rounded-2xl border border-white/6 bg-white/[0.02] hover:bg-white/[0.04] hover:border-electric-blue/20 transition-all duration-200 group"
+            className="flex items-center gap-4 py-2 transition-opacity duration-200 hover:opacity-80 group"
           >
             <div className="w-11 h-11 rounded-xl bg-electric-blue/10 border border-electric-blue/25 flex items-center justify-center flex-shrink-0">
               <Mail className="w-5 h-5 text-electric-blue" />
@@ -202,7 +202,7 @@ export default function Footer() {
             href="https://maps.google.com/?q=Karimangalam,Dharmapuri"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-start gap-4 p-5 rounded-2xl border border-white/6 bg-white/[0.02] hover:bg-white/[0.04] hover:border-purple/20 transition-all duration-200 group"
+            className="flex items-start gap-4 py-2 transition-opacity duration-200 hover:opacity-80 group"
           >
             <div className="w-11 h-11 rounded-xl bg-purple/10 border border-purple/25 flex items-center justify-center flex-shrink-0 mt-0.5">
               <MapPin className="w-5 h-5 text-purple" />
