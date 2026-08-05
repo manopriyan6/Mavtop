@@ -197,30 +197,7 @@ export default function HeroSection() {
           </a>
         </motion.div>
 
-        {/* Quick Stats */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 1.0 }}
-          className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto"
-        >
-          {[
-            { label: "System Uptime", value: "99.9", suffix: "%" },
-            { label: "Projects Delivered", value: "500", suffix: "+" },
-            { label: "Enterprise Clients", value: "50", suffix: "+" },
-            { label: "Support", value: "24", suffix: "×7" },
-          ].map((stat) => (
-            <div
-              key={stat.label}
-              className="glass-card rounded-2xl p-4 text-center"
-            >
-              <div className="stat-number text-2xl md:text-3xl font-black mb-1">
-                {stat.value}{stat.suffix}
-              </div>
-              <div className="text-xs text-muted font-inter">{stat.label}</div>
-            </div>
-          ))}
-        </motion.div>
+
       </div>
 
 
