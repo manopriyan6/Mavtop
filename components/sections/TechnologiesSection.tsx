@@ -43,7 +43,7 @@ function TechBadge({ tech }: { tech: (typeof technologies)[0] }) {
       >
         {tech.letter}
       </div>
-      <span className="font-jakarta font-semibold text-sm text-white/70 group-hover:text-white transition-colors whitespace-nowrap">
+      <span className="font-jakarta font-semibold text-sm text-slate-900/70 group-hover:text-slate-900 transition-colors whitespace-nowrap">
         {tech.name}
       </span>
     </div>
@@ -59,7 +59,7 @@ export default function TechnologiesSection() {
   const isInView = useInView(ref, { once: true, margin: "-80px" });
 
   return (
-    <section className="section-padding relative overflow-hidden bg-background" ref={ref}>
+    <section className="section-padding relative overflow-hidden bg-[#FAFAFA]" ref={ref}>
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-brand-blue/20 to-transparent" />
 
       <div className="container-custom relative z-10 mb-16">
@@ -73,13 +73,13 @@ export default function TechnologiesSection() {
             <Layers size={12} />
             Our Tech Stack
           </span>
-          <h2 className="font-grotesk font-bold text-4xl md:text-5xl lg:text-6xl text-white mt-6 mb-4">
+          <h2 className="font-grotesk font-bold text-4xl md:text-5xl lg:text-6xl text-slate-900 mt-6 mb-4">
             Powered by{" "}
             <span className="gradient-text-blue">World-Class</span>
             <br />
             Technology
           </h2>
-          <p className="text-muted font-jakarta text-lg max-w-xl mx-auto">
+          <p className="text-slate-500 font-jakarta text-lg max-w-xl mx-auto">
             We select the best tools for every project — no dogma, just results.
           </p>
         </motion.div>

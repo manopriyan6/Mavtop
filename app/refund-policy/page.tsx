@@ -8,10 +8,10 @@ export const metadata: Metadata = {
 
 export default function RefundPolicyPage() {
   return (
-    <main className="min-h-screen bg-[#131524] text-white">
-      <div className="border-b border-white/6">
+    <main className="min-h-screen bg-[#FAFAFA] text-slate-900">
+      <div className="border-b border-slate-100">
         <div className="max-w-4xl mx-auto px-6 py-6 flex items-center justify-between">
-          <Link href="/" className="text-sm text-[#A1A1AA] hover:text-white transition-colors">
+          <Link href="/" className="text-sm text-[#A1A1AA] hover:text-slate-900 transition-colors">
             ← Back to Home
           </Link>
           <span className="text-xs text-[#52525B] font-jakarta">Last updated: July 2025</span>
@@ -21,7 +21,7 @@ export default function RefundPolicyPage() {
       <div className="max-w-4xl mx-auto px-6 py-16">
         <div className="mb-12">
           <span className="text-xs font-jakarta text-brand-blue uppercase tracking-widest mb-4 block">Legal</span>
-          <h1 className="font-grotesk font-bold text-4xl md:text-5xl text-white mb-4">Refund & Cancellation Policy</h1>
+          <h1 className="font-grotesk font-bold text-4xl md:text-5xl text-slate-900 mb-4">Refund & Cancellation Policy</h1>
           <p className="text-[#A1A1AA] font-jakarta text-lg">
             This policy outlines our strict guidelines for refunds and cancellations, as required by payment processing regulations.
           </p>
@@ -63,7 +63,7 @@ export default function RefundPolicyPage() {
             },
           ].map((section) => (
             <div key={section.title} className="border-b border-white/5 pb-8">
-              <h2 className="font-grotesk font-semibold text-xl text-white mb-3">{section.title}</h2>
+              <h2 className="font-grotesk font-semibold text-xl text-slate-900 mb-3">{section.title}</h2>
               <p className="text-[#A1A1AA] font-jakarta text-sm leading-relaxed whitespace-pre-line">{section.content}</p>
             </div>
           ))}
@@ -71,7 +71,7 @@ export default function RefundPolicyPage() {
 
         <div className="mt-12 p-6 rounded-2xl border border-brand-blue/15 bg-brand-blue/5">
           <p className="text-[#A1A1AA] font-jakarta text-sm">
-            <span className="text-white font-semibold">Need help?</span> Contact our billing support at{" "}
+            <span className="text-slate-900 font-semibold">Need help?</span> Contact our billing support at{" "}
             <a href="mailto:hello@mavtop.in" className="text-brand-blue hover:underline">hello@mavtop.in</a>{" "}
             or call <a href="tel:+919385661495" className="text-brand-blue hover:underline">+91 93856 61495</a>.
           </p>

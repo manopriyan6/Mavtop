@@ -114,7 +114,7 @@ export default function ServicesSection() {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="services" className="section-padding relative overflow-hidden bg-background">
+    <section id="services" className="section-padding relative overflow-hidden bg-[#FAFAFA]">
       {/* Section background accent */}
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-brand-blue/30 to-transparent" />
       <div
@@ -141,13 +141,13 @@ export default function ServicesSection() {
             <Activity size={12} />
             What We Build
           </span>
-          <h2 className="font-grotesk font-bold text-4xl md:text-5xl lg:text-6xl text-white mt-6 mb-4">
+          <h2 className="font-grotesk font-bold text-4xl md:text-5xl lg:text-6xl text-slate-900 mt-6 mb-4">
             Full-Spectrum{" "}
             <span className="gradient-text-red">Technology</span>
             <br />
             Services
           </h2>
-          <p className="text-muted font-jakarta text-lg max-w-2xl mx-auto">
+          <p className="text-slate-500 font-jakarta text-lg max-w-2xl mx-auto">
             From AI-powered automation to enterprise cloud platforms — we build
             everything your business needs to lead in the digital era.
           </p>
@@ -166,7 +166,7 @@ export default function ServicesSection() {
               <motion.div
                 key={service.category}
                 variants={cardVariants}
-                className={`${service.size} glass-card rounded-2xl p-6 md:p-8 group cursor-pointer relative overflow-hidden`}
+                className={`${service.size} bg-white shadow-[0_4px_24px_rgba(0,0,0,0.04)] border border-slate-100 rounded-2xl p-6 md:p-8 group cursor-pointer relative overflow-hidden`}
                 style={{ borderColor: service.borderColor }}
                 whileHover={{
                   y: -6,
@@ -203,12 +203,12 @@ export default function ServicesSection() {
                   </div>
 
                   {/* Title */}
-                  <h3 className="font-grotesk font-bold text-xl md:text-2xl text-white mb-3">
+                  <h3 className="font-grotesk font-bold text-xl md:text-2xl text-slate-900 mb-3">
                     {service.category}
                   </h3>
 
                   {/* Description */}
-                  <p className="text-muted font-jakarta text-sm leading-relaxed mb-5">
+                  <p className="text-slate-500 font-jakarta text-sm leading-relaxed mb-5">
                     {service.description}
                   </p>
 
@@ -217,7 +217,7 @@ export default function ServicesSection() {
                     {service.items.map((item) => (
                       <span
                         key={item}
-                        className="px-3 py-1 rounded-lg text-xs font-jakarta font-medium text-white/70 border border-white/10 bg-white/5"
+                        className="px-3 py-1 rounded-lg text-xs font-jakarta font-medium text-slate-900/70 border border-slate-200 bg-white/5"
                       >
                         {item}
                       </span>

@@ -72,8 +72,8 @@ export default function Navbar() {
                   onClick={() => setActiveLink(link.label)}
                   className={`relative px-4 py-2 text-sm font-jakarta font-medium transition-colors duration-200 group ${
                     activeLink === link.label
-                      ? "text-white"
-                      : "text-muted hover:text-white"
+                      ? "text-slate-900"
+                      : "text-slate-500 hover:text-slate-900"
                   }`}
                 >
                   {link.label}
@@ -98,7 +98,7 @@ export default function Navbar() {
                 <ChevronRight size={14} />
               </a>
               <button
-                className="lg:hidden p-2 text-muted hover:text-white transition-colors"
+                className="lg:hidden p-2 text-slate-500 hover:text-slate-900 transition-colors"
                 onClick={() => setMenuOpen(!menuOpen)}
                 aria-label="Toggle menu"
               >
@@ -144,7 +144,7 @@ export default function Navbar() {
                 </div>
                 <button
                   onClick={() => setMenuOpen(false)}
-                  className="p-2 text-muted hover:text-white"
+                  className="p-2 text-slate-500 hover:text-slate-900"
                 >
                   <X size={20} />
                 </button>
@@ -158,7 +158,7 @@ export default function Navbar() {
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: i * 0.05, duration: 0.3 }}
                     onClick={() => setMenuOpen(false)}
-                    className="flex items-center justify-between py-3 px-4 rounded-xl text-muted hover:text-white hover:bg-glass-bg transition-all duration-200 font-jakarta font-medium"
+                    className="flex items-center justify-between py-3 px-4 rounded-xl text-slate-500 hover:text-slate-900 hover:bg-white transition-all duration-200 font-jakarta font-medium"
                   >
                     {link.label}
                     <ChevronRight size={14} className="opacity-40" />

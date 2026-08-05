@@ -111,7 +111,7 @@ export default function StatsSection() {
             <TrendingUp size={12} />
             By the Numbers
           </span>
-          <h2 className="font-grotesk font-bold text-4xl md:text-5xl lg:text-6xl text-white mt-6">
+          <h2 className="font-grotesk font-bold text-4xl md:text-5xl lg:text-6xl text-slate-900 mt-6">
             Results That{" "}
             <span className="gradient-text-red">Speak</span> for Themselves
           </h2>
@@ -129,7 +129,7 @@ export default function StatsSection() {
                 delay: i * 0.12,
                 ease: [0.23, 1, 0.32, 1],
               }}
-              className="glass-card rounded-2xl md:rounded-3xl p-6 md:p-8 text-center relative overflow-hidden group"
+              className="bg-white shadow-[0_4px_24px_rgba(0,0,0,0.04)] border border-slate-100 rounded-2xl md:rounded-3xl p-6 md:p-8 text-center relative overflow-hidden group"
               style={{ borderColor: `${stat.color}20` }}
               whileHover={{
                 y: -6,
@@ -139,7 +139,7 @@ export default function StatsSection() {
             >
               {/* Glow dot */}
               <div
-                className="absolute top-4 right-4 w-2 h-2 rounded-full animate-pulse"
+                className="absolute top-4 right-4 w-2 h-2 rounded-full hidden"
                 style={{ background: stat.color }}
               />
 
@@ -160,10 +160,10 @@ export default function StatsSection() {
                 />
               </div>
 
-              <div className="font-grotesk font-bold text-white text-sm md:text-base mb-1">
+              <div className="font-grotesk font-bold text-slate-900 text-sm md:text-base mb-1">
                 {stat.label}
               </div>
-              <div className="text-muted font-jakarta text-xs">{stat.sublabel}</div>
+              <div className="text-slate-500 font-jakarta text-xs">{stat.sublabel}</div>
 
               {/* Bottom glow line */}
               <div

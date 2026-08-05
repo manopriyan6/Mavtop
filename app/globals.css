@@ -9,7 +9,7 @@
    CSS VARIABLES — MAVTOP DESIGN SYSTEM
    ============================================================ */
 :root {
-  --bg: #131524;
+  --bg: #FAFAFA;
   --brand-navy: #1E2038;
   --brand-blue: #0348FF;
   --brand-blue-light: #90B0F9;
@@ -18,8 +18,8 @@
   --purple: #7C3AED;
   --purple-light: #8B5CF6;
   --white: #FFFFFF;
-  --muted: #A1A1AA;
-  --muted-dark: #71717A;
+  --muted: #64748B;
+  --muted-dark: #475569;
   --glass-bg: rgba(255, 255, 255, 0.04);
   --glass-border: rgba(255, 255, 255, 0.08);
   --glass-bg-hover: rgba(255, 255, 255, 0.07);

@@ -63,7 +63,7 @@ export default function RootLayout({
         />
         <link rel="icon" href="/favicon.ico" />
       </head>
-      <body className="bg-background text-white antialiased overflow-x-hidden">
+      <body className="bg-[#FAFAFA] text-slate-900 antialiased overflow-x-hidden">
         {children}
       </body>
     </html>

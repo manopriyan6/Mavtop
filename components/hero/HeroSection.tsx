@@ -3,204 +3,147 @@
 import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { ChevronRight, Play } from "lucide-react";
-
-// Particle component
-function Particles() {
-  return (
-    <div className="absolute inset-0 overflow-hidden pointer-events-none">
-      {Array.from({ length: 30 }).map((_, i) => (
-        <div
-          key={i}
-          className="particle"
-          style={{
-            left: `${Math.random() * 100}%`,
-            top: `${Math.random() * 100}%`,
-            width: `${Math.random() * 3 + 1}px`,
-            height: `${Math.random() * 3 + 1}px`,
-            animationDuration: `${Math.random() * 15 + 8}s`,
-            animationDelay: `${Math.random() * 8}s`,
-            background:
-              i % 3 === 0
-                ? "rgba(34,197,94,0.7)"
-                : i % 3 === 1
-                ? "rgba(37,99,235,0.7)"
-                : "rgba(124,58,237,0.5)",
-          }}
-        />
-      ))}
-    </div>
-  );
-}
-
-// Light trails
-function LightTrails() {
-  return (
-    <div className="absolute inset-0 overflow-hidden pointer-events-none">
-      {Array.from({ length: 5 }).map((_, i) => (
-        <div
-          key={i}
-          className="light-trail"
-          style={{
-            top: `${20 + i * 15}%`,
-            width: `${200 + i * 50}px`,
-            animationDuration: `${5 + i * 2}s`,
-            animationDelay: `${i * 1.5}s`,
-            opacity: 0.4 - i * 0.05,
-          }}
-        />
-      ))}
-    </div>
-  );
-}
-
-// Animated counter hook
-function useCounter(target: number, duration: number = 2000, start: boolean = false) {
-  const [count, setCount] = useState(0);
-  useEffect(() => {
-    if (!start) return;
-    let startTime: number | null = null;
-    const step = (timestamp: number) => {
-      if (!startTime) startTime = timestamp;
-      const progress = Math.min((timestamp - startTime) / duration, 1);
-      const eased = 1 - Math.pow(1 - progress, 3);
-      setCount(Math.floor(eased * target));
-      if (progress < 1) requestAnimationFrame(step);
-    };
-    requestAnimationFrame(step);
-  }, [start, target, duration]);
-  return count;
-}
+import { ArrowRight, Play, Star } from "lucide-react";
 
 export default function HeroSection() {
-  const [countersStarted, setCountersStarted] = useState(false);
   const heroRef = useRef<HTMLElement>(null);
-
-  useEffect(() => {
-    const timer = setTimeout(() => setCountersStarted(true), 1500);
-    return () => clearTimeout(timer);
-  }, []);
 
   return (
     <section
       id="home"
       ref={heroRef}
-      className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden bg-background"
+      className="relative min-h-screen flex flex-col items-center justify-start pt-32 pb-16 overflow-hidden bg-[#FAFAFA]"
     >
-      {/* Animated Grid */}
-      <div className="animated-grid" />
+      {/* Background styling - very clean, no neon glows */}
+      <div className="absolute inset-0 pointer-events-none overflow-hidden flex justify-center">
+        {/* Subtle radial gradient to center focus */}
+        <div className="absolute top-0 w-full h-[600px] bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-slate-100/80 via-transparent to-transparent"></div>
+        
+        {/* Subtle grid pattern - very light */}
+        <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-[0.015] mix-blend-overlay"></div>
+      </div>
 
-      {/* Aurora Blobs */}
-      <div
-        className="aurora-blob"
-        style={{
-          width: "600px",
-          height: "600px",
-          background: "radial-gradient(circle, rgba(34,197,94,0.25), transparent 70%)",
-          top: "-10%",
-          right: "-5%",
-          animationDelay: "0s",
-          animationDuration: "10s",
-        }}
-      />
-      <div
-        className="aurora-blob"
-        style={{
-          width: "500px",
-          height: "500px",
-          background: "radial-gradient(circle, rgba(37,99,235,0.2), transparent 70%)",
-          bottom: "-5%",
-          left: "-5%",
-          animationDelay: "3s",
-          animationDuration: "12s",
-        }}
-      />
-      <div
-        className="aurora-blob"
-        style={{
-          width: "400px",
-          height: "400px",
-          background: "radial-gradient(circle, rgba(124,58,237,0.2), transparent 70%)",
-          top: "40%",
-          left: "45%",
-          animationDelay: "5s",
-          animationDuration: "9s",
-        }}
-      />
-
-      {/* Particles & Light Trails */}
-      <Particles />
-      <LightTrails />
-
-      {/* Hero Content */}
-      <div className="container-custom relative z-10 text-center pt-24 pb-16">
-        {/* Label */}
+      <div className="container-custom relative z-10 text-center flex flex-col items-center">
+        
+        {/* Top Badge */}
         <motion.div
+          initial={{ opacity: 0, y: 15 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className="mb-8"
+        >
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white border border-slate-200 shadow-sm">
+            <div className="w-5 h-5 rounded-full bg-[#FF4F00] flex items-center justify-center">
+              <Star className="w-3 h-3 text-white fill-white" />
+            </div>
+            <span className="text-sm font-medium text-slate-700">
+              TRUSTED BY 50+ ENTERPRISE CLIENTS
+            </span>
+          </div>
+        </motion.div>
+
+        {/* Headline */}
+        <motion.h1
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.1 }}
+          className="text-5xl md:text-6xl lg:text-7xl font-jakarta font-bold mb-6 max-w-5xl mx-auto leading-[1.1] tracking-tight text-slate-900"
+        >
+          Engineering the future with <br className="hidden md:block" />
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#007AFF] to-[#5AC8FA]">
+            Maximum Value & Performance
+          </span>
+        </motion.h1>
+
+        {/* Subtitle */}
+        <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="flex justify-center mb-8"
+          className="text-lg md:text-xl text-slate-500 font-jakarta max-w-2xl mx-auto mb-10 leading-relaxed"
         >
-          <span className="section-label">
-            <span className="w-1.5 h-1.5 bg-brand-blue rounded-full animate-pulse" />
-            Chennai · Tamil Nadu · India
-          </span>
-        </motion.div>
-
-
-
-
-        {/* Subheadline */}
-        <motion.p
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.5, ease: [0.23, 1, 0.32, 1] }}
-          className="text-3xl md:text-5xl lg:text-6xl font-grotesk font-bold mb-6 max-w-5xl mx-auto leading-tight"
-        >
-          Engineering the Future with{" "}
-          <span className="gradient-text-red">Maximum Value</span>
-          {" "}+{" "}
-          <span className="gradient-text-blue">Top Performance</span>
-        </motion.p>
-
-
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.65 }}
-          className="text-base md:text-lg text-muted font-jakarta max-w-2xl mx-auto mb-12 leading-relaxed"
-        >
-          We build AI-powered software, enterprise automation, cloud platforms
-          and digital experiences that help businesses scale faster.
+          We build robust software, enterprise automation, and cloud platforms
+          that help businesses scale faster and save up to 80% on operational costs.
         </motion.p>
 
         {/* CTA Buttons */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.8 }}
-          className="flex flex-col sm:flex-row gap-4 justify-center mb-16"
+          transition={{ duration: 0.6, delay: 0.3 }}
+          className="flex flex-col items-center mb-16"
         >
           <a
             href="#contact"
-            className="btn-primary inline-flex items-center justify-center gap-2 px-8 py-4 text-base font-bold rounded-xl"
+            className="inline-flex items-center justify-center gap-2 px-8 py-4 text-base font-semibold text-white bg-[#2563EB] hover:bg-[#1D4ED8] rounded-xl shadow-[0_8px_30px_rgb(37,99,235,0.2)] transition-all hover:-translate-y-0.5"
           >
-            Start Your Project
-            <ChevronRight size={18} />
+            Get started for FREE
+            <ArrowRight size={18} />
           </a>
-          <a
-            href="#products"
-            className="btn-secondary inline-flex items-center justify-center gap-2 px-8 py-4 text-base font-semibold rounded-xl"
-          >
-            <Play size={16} className="text-electric-blue" />
-            View Our Work
-          </a>
+          
+          {/* Trust Text */}
+          <div className="flex items-center gap-4 mt-6 text-sm text-slate-500 font-medium">
+            <span>No credit card required</span>
+            <div className="w-1 h-1 rounded-full bg-slate-300"></div>
+            <div className="flex items-center gap-1.5">
+              <span className="flex items-center bg-slate-200/50 rounded-full px-1.5 py-0.5">
+                <Star className="w-3 h-3 text-slate-700 fill-slate-700" />
+              </span>
+              Rated 4.9/5 by our clients
+            </div>
+          </div>
         </motion.div>
 
+        {/* Large Mockup Image Placeholder */}
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+          className="w-full max-w-5xl mx-auto mt-4 relative"
+        >
+          <div className="relative w-full aspect-video rounded-2xl md:rounded-[2rem] overflow-hidden bg-white shadow-[0_20px_60px_-15px_rgba(0,0,0,0.1)] border border-slate-200 p-2 md:p-4 flex flex-col">
+            
+            {/* Mock browser header */}
+            <div className="flex items-center gap-2 mb-4 px-2 pt-2">
+              <div className="flex gap-1.5">
+                <div className="w-3 h-3 rounded-full bg-slate-200"></div>
+                <div className="w-3 h-3 rounded-full bg-slate-200"></div>
+                <div className="w-3 h-3 rounded-full bg-slate-200"></div>
+              </div>
+              <div className="mx-auto bg-slate-100 rounded-md h-6 w-1/3 flex items-center justify-center">
+                <div className="w-1/2 h-2 bg-slate-200 rounded-full"></div>
+              </div>
+            </div>
+
+            {/* Inner Content Area */}
+            <div className="flex-1 bg-slate-50 rounded-xl md:rounded-2xl border border-slate-100 overflow-hidden relative group cursor-pointer">
+              {/* Play button overlay */}
+              <div className="absolute inset-0 flex items-center justify-center z-10">
+                <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-[0_8px_30px_rgb(0,0,0,0.12)] group-hover:scale-110 transition-transform">
+                  <Play className="w-6 h-6 text-[#2563EB] fill-[#2563EB] ml-1" />
+                </div>
+              </div>
+              
+              {/* Gradient abstract background representing software/video */}
+              <div className="absolute inset-0 bg-gradient-to-br from-[#E0E7FF] via-[#F3E8FF] to-[#DBEAFE] opacity-70"></div>
+              
+              {/* Fake UI elements */}
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-3/4 h-3/4 flex gap-4">
+                <div className="w-1/3 h-full bg-white/60 backdrop-blur-sm rounded-xl border border-white/50 p-4">
+                  <div className="w-full h-4 bg-slate-200/50 rounded mb-4"></div>
+                  <div className="w-3/4 h-3 bg-slate-200/50 rounded mb-2"></div>
+                  <div className="w-5/6 h-3 bg-slate-200/50 rounded mb-2"></div>
+                  <div className="w-full h-24 bg-[#2563EB]/10 rounded-lg mt-6 border border-[#2563EB]/20"></div>
+                </div>
+                <div className="flex-1 h-full bg-white/80 backdrop-blur-sm rounded-xl border border-white/50 shadow-sm relative overflow-hidden">
+                   <div className="absolute top-0 w-full h-1 bg-gradient-to-r from-[#007AFF] to-[#5AC8FA]"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </motion.div>
 
       </div>
-
-
     </section>
   );
 }

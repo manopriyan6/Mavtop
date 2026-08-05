@@ -119,11 +119,11 @@ export default function TestimonialsSection() {
             <Quote size={12} />
             Client Stories
           </span>
-          <h2 className="font-grotesk font-bold text-4xl md:text-5xl lg:text-6xl text-white mt-6 mb-4">
+          <h2 className="font-grotesk font-bold text-4xl md:text-5xl lg:text-6xl text-slate-900 mt-6 mb-4">
             Trusted by{" "}
             <span className="gradient-text-red">Industry</span> Leaders
           </h2>
-          <p className="text-muted font-jakarta text-lg max-w-xl mx-auto">
+          <p className="text-slate-500 font-jakarta text-lg max-w-xl mx-auto">
             Real results from real businesses across India.
           </p>
         </motion.div>
@@ -141,7 +141,7 @@ export default function TestimonialsSection() {
                   scale: offset === 0 ? 1 : 0.88,
                 }}
                 transition={{ duration: 0.5, ease: [0.23, 1, 0.32, 1] }}
-                className={`glass-card rounded-3xl p-8 relative overflow-hidden flex-shrink-0 ${
+                className={`bg-white shadow-[0_4px_24px_rgba(0,0,0,0.04)] border border-slate-100 rounded-3xl p-8 relative overflow-hidden flex-shrink-0 ${
                   offset === 0
                     ? "w-full max-w-2xl z-10"
                     : "w-72 hidden md:block cursor-pointer"
@@ -182,7 +182,7 @@ export default function TestimonialsSection() {
                   </div>
 
                   {/* Quote */}
-                  <blockquote className="font-jakarta text-white/85 text-base md:text-lg leading-relaxed mb-8 italic">
+                  <blockquote className="font-jakarta text-slate-900/85 text-base md:text-lg leading-relaxed mb-8 italic">
                     "{data.quote}"
                   </blockquote>
 
@@ -199,8 +199,8 @@ export default function TestimonialsSection() {
                       {data.initial}
                     </div>
                     <div>
-                      <div className="font-grotesk font-bold text-white">{data.name}</div>
-                      <div className="font-jakarta text-sm text-muted">
+                      <div className="font-grotesk font-bold text-slate-900">{data.name}</div>
+                      <div className="font-jakarta text-sm text-slate-500">
                         {data.role}, {data.company}
                       </div>
                     </div>
@@ -214,7 +214,7 @@ export default function TestimonialsSection() {
           <div className="flex items-center justify-center gap-4 mt-10">
             <button
               onClick={prev}
-              className="w-11 h-11 rounded-full glass-card flex items-center justify-center text-muted hover:text-white transition-all duration-200 hover:border-brand-blue/40 hover:bg-brand-blue/10"
+              className="w-11 h-11 rounded-full bg-white shadow-[0_4px_24px_rgba(0,0,0,0.04)] border border-slate-100 flex items-center justify-center text-slate-500 hover:text-slate-900 transition-all duration-200 hover:border-brand-blue/40 hover:bg-brand-blue/10"
             >
               <ChevronLeft size={18} />
             </button>
@@ -233,7 +233,7 @@ export default function TestimonialsSection() {
 
             <button
               onClick={next}
-              className="w-11 h-11 rounded-full glass-card flex items-center justify-center text-muted hover:text-white transition-all duration-200 hover:border-brand-blue/40 hover:bg-brand-blue/10"
+              className="w-11 h-11 rounded-full bg-white shadow-[0_4px_24px_rgba(0,0,0,0.04)] border border-slate-100 flex items-center justify-center text-slate-500 hover:text-slate-900 transition-all duration-200 hover:border-brand-blue/40 hover:bg-brand-blue/10"
             >
               <ChevronRight size={18} />
             </button>
