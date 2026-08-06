@@ -3,40 +3,17 @@
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import Link from "next/link";
-import { Users, MessageCircle, Cpu, Receipt, ArrowRight } from "lucide-react";
+import { MessageCircle, ArrowRight } from "lucide-react";
 
 const products = [
-  {
-    id: "crm",
-    name: "Mavtop CRM",
-    description: "Intelligent customer relationship management with automated workflows and real-time analytics to close more deals.",
-    icon: Users,
-    color: "#2563EB",
-    isImportant: true
-  },
   {
     id: "whatsapp",
     name: "WhatsApp Cloud",
     description: "Enterprise-grade WhatsApp Business platform for bulk campaigns, chatbots, and multi-agent customer support.",
     icon: MessageCircle,
     color: "#25D366",
-    isImportant: false
-  },
-  {
-    id: "ai",
-    name: "Mavtop AI",
-    description: "Your secure, private AI assistant trained on your own company data to automate internal workflows instantly.",
-    icon: Cpu,
-    color: "#007AFF",
-    isImportant: false
-  },
-  {
-    id: "pos",
-    name: "Mavtop POS",
-    description: "Modern cloud-based point-of-sale system with seamless inventory syncing, offline mode, and tax automation.",
-    icon: Receipt,
-    color: "#7C3AED",
-    isImportant: false
+    href: "https://automate.go4chat.in/",
+    isExternal: true,
   }
 ];
 
@@ -67,7 +44,7 @@ export default function ProductsSection() {
         </div>
 
         {/* Simple Information Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 max-w-2xl mx-auto">
           {products.map((product, idx) => {
             const Icon = product.icon;
             return (
@@ -91,9 +68,20 @@ export default function ProductsSection() {
                   {product.description}
                 </p>
                 
-                <Link href="/book" className="inline-flex items-center gap-2 text-sm font-semibold text-brand-blue hover:text-blue-700 transition-colors">
-                  Explore solution <ArrowRight size={16} />
-                </Link>
+                {product.isExternal ? (
+                  <a
+                    href={product.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 text-sm font-semibold text-brand-blue hover:text-blue-700 transition-colors"
+                  >
+                    Explore solution <ArrowRight size={16} />
+                  </a>
+                ) : (
+                  <Link href={product.href} className="inline-flex items-center gap-2 text-sm font-semibold text-brand-blue hover:text-blue-700 transition-colors">
+                    Explore solution <ArrowRight size={16} />
+                  </Link>
+                )}
               </motion.div>
             )
           })}

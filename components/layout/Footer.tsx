@@ -15,10 +15,7 @@ const footerLinks = {
     { label: "Digital Transformation", href: "/services" },
   ],
   Products: [
-    { label: "Mavtop CRM", href: "/products" },
-    { label: "WhatsApp Cloud", href: "/products" },
-    { label: "Mavtop AI", href: "/products" },
-    { label: "Mavtop Billing", href: "/products" },
+    { label: "WhatsApp Cloud", href: "https://automate.go4chat.in/" },
   ],
   Company: [
     { label: "Home", href: "/" },
