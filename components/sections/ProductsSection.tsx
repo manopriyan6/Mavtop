@@ -2,6 +2,7 @@
 
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
+import Link from "next/link";
 import { Users, MessageCircle, Cpu, Receipt, ArrowRight } from "lucide-react";
 
 const products = [
@@ -90,9 +91,9 @@ export default function ProductsSection() {
                   {product.description}
                 </p>
                 
-                <a href="#contact" className="inline-flex items-center gap-2 text-sm font-semibold text-brand-blue hover:text-blue-700 transition-colors">
-                  Learn more <ArrowRight size={16} />
-                </a>
+                <Link href="/book" className="inline-flex items-center gap-2 text-sm font-semibold text-brand-blue hover:text-blue-700 transition-colors">
+                  Explore solution <ArrowRight size={16} />
+                </Link>
               </motion.div>
             )
           })}

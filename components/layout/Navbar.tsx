@@ -14,7 +14,7 @@ const navLinks = [
   { label: "Products", href: "/products" },
   { label: "Case Studies", href: "/case-studies" },
   { label: "About", href: "/about" },
-  { label: "Contact", href: "/#contact" },
+  { label: "Contact", href: "/book" },
 ];
 
 export default function Navbar() {
@@ -79,7 +79,7 @@ export default function Navbar() {
             {/* CTA + Mobile */}
             <div className="flex items-center gap-3">
               <Link
-                href="/#contact"
+                href="/book"
                 className="hidden md:inline-flex items-center gap-2 btn-primary px-5 py-2.5 text-sm"
               >
                 Get Started
@@ -142,7 +142,7 @@ export default function Navbar() {
               </div>
               <div className="mt-auto p-6 border-t border-slate-100 dark:border-slate-800">
                 <Link
-                  href="/#contact"
+                  href="/book"
                   className="w-full flex items-center justify-center gap-2 btn-primary py-3.5 text-base"
                   onClick={() => setMenuOpen(false)}
                 >

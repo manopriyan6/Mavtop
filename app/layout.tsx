@@ -100,7 +100,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className="antialiased font-jakarta text-slate-900 dark:text-slate-100 bg-[#FAFAFA] dark:bg-[#0D0D0F] transition-colors duration-300">
+      <body className="antialiased font-jakarta text-slate-900 dark:text-slate-100 bg-[#FAFAFA] dark:bg-[#0D0D0F] transition-colors duration-300" suppressHydrationWarning>
         <ThemeProvider
           attribute="class"
           defaultTheme="light"

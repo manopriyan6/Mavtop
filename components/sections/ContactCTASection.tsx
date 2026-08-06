@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import {
   Calendar,
@@ -8,32 +8,14 @@ import {
   Phone,
   MapPin,
   Send,
-  ChevronRight,
   MessageSquare,
+  ChevronRight,
 } from "lucide-react";
+import Link from "next/link";
 
 export default function ContactCTASection() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-80px" });
-  const [formState, setFormState] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    company: "",
-    message: "",
-  });
-  const [submitted, setSubmitted] = useState(false);
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Create mailto link
-    const subject = encodeURIComponent(`New Project Inquiry from ${formState.name} - ${formState.company}`);
-    const body = encodeURIComponent(
-      `Name: ${formState.name}\nEmail: ${formState.email}\nPhone: ${formState.phone}\nCompany: ${formState.company}\n\nMessage:\n${formState.message}`
-    );
-    window.location.href = `mailto:hello@mavtop.in?subject=${subject}&body=${body}`;
-    setSubmitted(true);
-  };
 
   return (
     <section id="contact" className="section-padding relative overflow-hidden" ref={ref}>
@@ -114,113 +96,38 @@ export default function ContactCTASection() {
 
         {/* Form + Info grid */}
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 max-w-5xl mx-auto">
-          {/* Form */}
+          {/* Big CTA Block instead of form */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.7, delay: 0.2 }}
-            className="lg:col-span-3 bg-white dark:bg-[#131524] shadow-[0_4px_24px_rgba(0,0,0,0.04)] border border-slate-100 dark:border-slate-800 rounded-3xl p-8 border-brand-blue/15"
+            className="lg:col-span-3 bg-brand-blue/10 dark:bg-brand-blue/5 border border-brand-blue/20 dark:border-brand-blue/10 rounded-3xl p-10 lg:p-12 flex flex-col justify-center items-start relative overflow-hidden"
           >
-            {submitted ? (
-              <div className="flex flex-col items-center justify-center h-full py-12 text-center">
-                <div className="w-16 h-16 rounded-full bg-brand-blue/20 border border-brand-blue/30 flex items-center justify-center mb-4">
-                  <Send size={24} className="text-brand-blue" />
-                </div>
-                <h3 className="font-grotesk font-bold text-2xl text-slate-900 dark:text-white mb-2">Message Sent!</h3>
-                <p className="text-slate-500 dark:text-slate-400 font-jakarta text-sm">
-                  We'll get back to you within 24 hours.
-                </p>
-              </div>
-            ) : (
-              <form onSubmit={handleSubmit} className="space-y-5">
-                <div>
-                  <h3 className="font-grotesk font-bold text-xl text-slate-900 dark:text-white mb-1">
-                    Start Your Project
-                  </h3>
-                  <p className="text-slate-500 dark:text-slate-400 font-jakarta text-sm">
-                    Fill in the details and we'll reach out within one business day.
-                  </p>
-                </div>
-
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  <div>
-                    <label className="block text-xs font-jakarta font-medium text-slate-500 dark:text-slate-400 mb-2 uppercase tracking-wider">
-                      Your Name *
-                    </label>
-                    <input
-                      type="text"
-                      required
-                      value={formState.name}
-                      onChange={(e) => setFormState({ ...formState, name: e.target.value })}
-                      placeholder="Raj Kumar"
-                      className="w-full bg-white dark:bg-[#131524] border border-slate-200 dark:border-slate-800 border border-slate-200 dark:border-slate-800 rounded-xl px-4 py-3 text-sm font-jakarta text-slate-900 dark:text-white placeholder-white/30 focus:outline-none focus:border-brand-blue focus:bg-white/8 transition-all duration-200"
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-xs font-jakarta font-medium text-slate-500 dark:text-slate-400 mb-2 uppercase tracking-wider">
-                      Email Address *
-                    </label>
-                    <input
-                      type="email"
-                      required
-                      value={formState.email}
-                      onChange={(e) => setFormState({ ...formState, email: e.target.value })}
-                      placeholder="raj@company.com"
-                      className="w-full bg-white dark:bg-[#131524] border border-slate-200 dark:border-slate-800 border border-slate-200 dark:border-slate-800 rounded-xl px-4 py-3 text-sm font-jakarta text-slate-900 dark:text-white placeholder-white/30 focus:outline-none focus:border-brand-blue focus:bg-white/8 transition-all duration-200"
-                    />
-                  </div>
-                </div>
-
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  <div>
-                    <label className="block text-xs font-jakarta font-medium text-slate-500 dark:text-slate-400 mb-2 uppercase tracking-wider">
-                      Phone Number
-                    </label>
-                    <input
-                      type="tel"
-                      value={formState.phone}
-                      onChange={(e) => setFormState({ ...formState, phone: e.target.value })}
-                      placeholder="+91 98765 43210"
-                      className="w-full bg-white dark:bg-[#131524] border border-slate-200 dark:border-slate-800 border border-slate-200 dark:border-slate-800 rounded-xl px-4 py-3 text-sm font-jakarta text-slate-900 dark:text-white placeholder-white/30 focus:outline-none focus:border-brand-blue transition-all duration-200"
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-xs font-jakarta font-medium text-slate-500 dark:text-slate-400 mb-2 uppercase tracking-wider">
-                      Company Name
-                    </label>
-                    <input
-                      type="text"
-                      value={formState.company}
-                      onChange={(e) => setFormState({ ...formState, company: e.target.value })}
-                      placeholder="Your Company"
-                      className="w-full bg-white dark:bg-[#131524] border border-slate-200 dark:border-slate-800 border border-slate-200 dark:border-slate-800 rounded-xl px-4 py-3 text-sm font-jakarta text-slate-900 dark:text-white placeholder-white/30 focus:outline-none focus:border-brand-blue transition-all duration-200"
-                    />
-                  </div>
-                </div>
-
-                <div>
-                  <label className="block text-xs font-jakarta font-medium text-slate-500 dark:text-slate-400 mb-2 uppercase tracking-wider">
-                    Tell us about your project *
-                  </label>
-                  <textarea
-                    required
-                    rows={4}
-                    value={formState.message}
-                    onChange={(e) => setFormState({ ...formState, message: e.target.value })}
-                    placeholder="What would you like to build? What's your timeline and budget?"
-                    className="w-full bg-white dark:bg-[#131524] border border-slate-200 dark:border-slate-800 border border-slate-200 dark:border-slate-800 rounded-xl px-4 py-3 text-sm font-jakarta text-slate-900 dark:text-white placeholder-white/30 focus:outline-none focus:border-brand-blue transition-all duration-200 resize-none"
-                  />
-                </div>
-
-                <button
-                  type="submit"
-                  className="btn-primary w-full flex items-center justify-center gap-2 py-4 text-base font-bold rounded-xl"
-                >
-                  <Send size={16} />
-                  Book Free Consultation
-                </button>
-              </form>
-            )}
+            {/* Background decoration */}
+            <div className="absolute -top-24 -right-24 w-64 h-64 bg-brand-blue/20 blur-[80px] rounded-full pointer-events-none" />
+            <div className="absolute -bottom-24 -left-24 w-64 h-64 bg-purple-accent/10 blur-[80px] rounded-full pointer-events-none" />
+            
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-brand-blue/10 text-brand-blue rounded-full text-sm font-semibold mb-6 z-10">
+              <Calendar size={16} />
+              Let's talk about your project
+            </div>
+            
+            <h3 className="font-grotesk font-black text-4xl lg:text-5xl text-slate-900 dark:text-white mb-6 z-10 leading-tight">
+              Free 30 Mins <br/>
+              <span className="text-electric-blue">Discovery Call</span>
+            </h3>
+            
+            <p className="text-slate-600 dark:text-slate-400 font-jakarta text-lg mb-8 max-w-md z-10">
+              No forms. No waiting. Pick a time directly on our calendar and let's explore how we can help your business grow.
+            </p>
+            
+            <Link 
+              href="/book"
+              className="btn-primary inline-flex items-center justify-center gap-3 py-4 px-8 text-lg font-bold rounded-xl z-10 hover:-translate-y-1 transition-transform"
+            >
+              <Calendar size={20} />
+              Book Your Slot Now
+            </Link>
           </motion.div>
 
           {/* Info panel */}
@@ -228,11 +135,11 @@ export default function ContactCTASection() {
             initial={{ opacity: 0, x: 30 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.7, delay: 0.35 }}
-            className="lg:col-span-2 flex flex-col gap-5"
+            className="lg:col-span-2"
           >
             {/* Process steps */}
-            <div className="bg-white dark:bg-[#131524] shadow-[0_4px_24px_rgba(0,0,0,0.04)] border border-slate-100 dark:border-slate-800 rounded-2xl p-6">
-              <h3 className="font-grotesk font-bold text-slate-900 dark:text-white text-lg mb-5">
+            <div className="bg-white dark:bg-[#131524] shadow-[0_4px_24px_rgba(0,0,0,0.04)] border border-slate-100 dark:border-slate-800 rounded-2xl p-6 lg:p-8 h-full flex flex-col justify-center">
+              <h3 className="font-grotesk font-bold text-slate-900 dark:text-white text-xl mb-8">
                 Our Process
               </h3>
               {[
@@ -258,29 +165,6 @@ export default function ContactCTASection() {
                   </div>
                 </div>
               ))}
-            </div>
-
-            {/* Booking CTA */}
-            <div
-              className="bg-gradient-to-br from-[#0F132E] to-[#1F296D] shadow-xl border border-blue-900/50 rounded-2xl p-6 relative overflow-hidden group"
-            >
-              <div className="relative z-10">
-                <div className="w-10 h-10 rounded-xl bg-white/10 border border-white/20 flex items-center justify-center mb-4 group-hover:bg-white/20 transition-colors">
-                  <Calendar size={18} className="text-white" />
-                </div>
-                <h3 className="font-grotesk font-bold text-white text-lg mb-2">
-                  Free 30-min Call
-                </h3>
-                <p className="font-jakarta text-blue-100/70 text-sm mb-4">
-                  Book a strategy call with our tech lead. No sales pitch — just a real conversation about your goals.
-                </p>
-                <a
-                  href="mailto:hello@mavtop.in?subject=Book%20a%20Free%20Consultation"
-                  className="flex items-center gap-2 text-sm font-grotesk font-bold text-blue-300 hover:text-white hover:gap-3 transition-all duration-200"
-                >
-                  Book Now <ChevronRight size={14} />
-                </a>
-              </div>
             </div>
           </motion.div>
         </div>

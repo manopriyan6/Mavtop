@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 import { ArrowRight, Play, Star } from "lucide-react";
 import BrandsSection from "@/components/sections/BrandsSection";
 
@@ -56,13 +57,13 @@ export default function HeroSection() {
           transition={{ duration: 0.6, delay: 0.3 }}
           className="flex flex-col items-center mb-16"
         >
-          <a
-            href="#contact"
+          <Link
+            href="/book"
             className="inline-flex items-center justify-center gap-2 px-8 py-4 text-base font-semibold text-white bg-[#2563EB] hover:bg-[#1D4ED8] rounded-xl shadow-[0_8px_30px_rgb(37,99,235,0.2)] transition-all hover:-translate-y-0.5"
           >
             Book a Call
             <ArrowRight size={18} />
-          </a>
+          </Link>
           
         </motion.div>
 

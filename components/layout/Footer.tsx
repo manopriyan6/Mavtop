@@ -26,7 +26,7 @@ const footerLinks = {
     { label: "Services", href: "/services" },
     { label: "Solutions", href: "/solutions" },
     { label: "Case Studies", href: "/case-studies" },
-    { label: "Contact", href: "/#contact" },
+    { label: "Contact", href: "/book" },
   ],
   Legal: [
     { label: "Privacy Policy", href: "/privacy-policy" },
@@ -60,7 +60,7 @@ const socials = [
   },
   {
     label: "Instagram",
-    href: "https://instagram.com/mavtoptech",
+    href: "https://instagram.com/mavtop.tech",
     color: "hover:text-[#E1306C] hover:border-[#E1306C]/40 hover:bg-[#E1306C]/10",
     icon: (
       <svg viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5">
