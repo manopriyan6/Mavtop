@@ -3,6 +3,7 @@ import { ThemeProvider } from "@/components/ThemeProvider";
 import "./globals.css";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://mavtop.in"),
   title: "Mavtop Technologies — Maximum Value + Top Performance",
   description:
     "Mavtop Technologies builds AI-powered software, enterprise automation, cloud platforms, and digital experiences that help businesses scale faster. Chennai, Tamil Nadu, India.",
@@ -47,8 +48,13 @@ export const metadata: Metadata = {
     follow: true,
   },
   icons: {
-    icon: "/logo-symbol-transparent.png",
-    apple: "/logo-symbol-transparent.png",
+    icon: [
+      { url: "/favicon-mavtop.png", type: "image/png", sizes: "512x512" },
+    ],
+    apple: [
+      { url: "/favicon-mavtop.png", type: "image/png", sizes: "512x512" },
+    ],
+    shortcut: "/favicon-mavtop.png",
   }
 };
 
@@ -90,7 +96,7 @@ export default function RootLayout({
               "@type": "Organization",
               "name": "Mavtop Technologies",
               "url": "https://mavtop.in",
-              "logo": "https://mavtop.in/logo-symbol-transparent.png",
+              "logo": "https://mavtop.in/favicon-mavtop.png",
               "contactPoint": {
                 "@type": "ContactPoint",
                 "telephone": "+91-93856-61495",
