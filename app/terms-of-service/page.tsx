@@ -23,7 +23,7 @@ export default function TermsOfServicePage() {
           <span className="text-xs font-jakarta text-brand-blue uppercase tracking-widest mb-4 block">Legal</span>
           <h1 className="font-grotesk font-bold text-4xl md:text-5xl text-slate-900 mb-4">Terms of Service</h1>
           <p className="text-[#A1A1AA] font-jakarta text-lg">
-            These terms govern your use of Mavtop Technologies Pvt. Ltd.&apos;s website and services. Please read them carefully.
+            These terms govern your use of Mavtop Technologies&apos;s website and services. Please read them carefully.
           </p>
         </div>
 
@@ -62,7 +62,7 @@ export default function TermsOfServicePage() {
             },
             {
               title: "7. Limitation of Liability",
-              content: `To the maximum extent permitted by law, Mavtop Technologies Pvt. Ltd., its directors, employees, or agents shall not be liable for any indirect, incidental, special, consequential, or punitive damages, including loss of profits, data, or goodwill, arising out of your use of our services. Our total liability shall not exceed the total amount paid by you to us in the preceding 3 months.`,
+              content: `To the maximum extent permitted by law, Mavtop Technologies, its directors, employees, or agents shall not be liable for any indirect, incidental, special, consequential, or punitive damages, including loss of profits, data, or goodwill, arising out of your use of our services. Our total liability shall not exceed the total amount paid by you to us in the preceding 3 months.`,
             },
             {
               title: "8. Governing Law and Jurisdiction",
@@ -73,7 +73,7 @@ export default function TermsOfServicePage() {
               content: `Questions about the Terms of Service should be sent to us at:
               Email: hello@mavtop.in
               Phone: +91 93856 61495
-              Address: Mavtop Technologies Pvt. Ltd., 293, Permandapatti, K Ichambadi Post, Karimangalam Taluk, Dharmapuri – 635202, Tamil Nadu, India`,
+              Address: Mavtop Technologies, 293, Permandapatti, K Ichambadi Post, Karimangalam Taluk, Dharmapuri – 635202, Tamil Nadu, India`,
             },
           ].map((section) => (
             <div key={section.title} className="border-b border-white/5 pb-8">

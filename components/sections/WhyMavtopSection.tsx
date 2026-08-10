@@ -102,7 +102,7 @@ export default function WhyMavtopSection() {
         >
           <span className="section-label mb-6 inline-flex">
             <CheckCircle2 size={12} />
-            Why Mavtop
+            Why Mavtop Technologies
           </span>
           <h2 className="font-grotesk font-bold text-4xl md:text-5xl lg:text-6xl text-slate-900 dark:text-white mt-6 mb-4">
             Not Just a Vendor —{" "}

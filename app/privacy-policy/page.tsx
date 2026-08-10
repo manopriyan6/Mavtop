@@ -25,7 +25,7 @@ export default function PrivacyPolicyPage() {
           <span className="text-xs font-jakarta text-brand-blue uppercase tracking-widest mb-4 block">Legal</span>
           <h1 className="font-grotesk font-bold text-4xl md:text-5xl text-slate-900 mb-4">Privacy Policy</h1>
           <p className="text-[#A1A1AA] font-jakarta text-lg">
-            Mavtop Technologies Pvt. Ltd. ("we", "our", or "us") is committed to protecting your privacy. This policy explains how we collect, use, disclose, and safeguard your information when you visit our website or use our services.
+            Mavtop Technologies ("we", "our", or "us") is committed to protecting your privacy. This policy explains how we collect, use, disclose, and safeguard your information when you visit our website or use our services.
           </p>
         </div>
 
@@ -71,7 +71,7 @@ export default function PrivacyPolicyPage() {
               content: `In accordance with the Information Technology Act, 2000 and rules made there under, the name and contact details of the Grievance Officer are provided below:
               
               Name: Legal / Grievance Officer
-              Mavtop Technologies Pvt. Ltd.
+              Mavtop Technologies
               Address: 293, Permandapatti, K Ichambadi Post, Karimangalam Taluk, Dharmapuri – 635202, Tamil Nadu, India
               Email: hello@mavtop.in
               Phone: +91 93856 61495`,

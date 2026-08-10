@@ -193,13 +193,13 @@ export default function Footer() {
         <div className="mt-10 mb-6 h-px bg-slate-200" />
 
         {/* ─── Copyright bar ────────────────────────────────── */}
-        <div className="flex flex-col sm:flex-row items-center justify-between gap-3">
-          <p className="text-sm font-jakarta font-semibold text-slate-800 dark:text-slate-200 text-center sm:text-left">
-            © {new Date().getFullYear()} Mavtop Technologies Pvt. Ltd. All rights reserved.
-            <span className="mx-2 text-slate-300">·</span>
-            <span className="text-slate-600 dark:text-slate-400 font-medium">Maximum Value + Top Performance · Dharmapuri, Tamil Nadu</span>
+        <div className="flex flex-col md:flex-row items-center justify-between gap-3 text-center md:text-left text-xs sm:text-sm font-jakarta text-slate-500 dark:text-slate-400">
+          <p>
+            © {new Date().getFullYear()} <span className="font-semibold text-slate-900 dark:text-white">Mavtop Technologies</span> All rights reserved.
           </p>
-          
+          <p className="text-slate-400 dark:text-slate-500 text-xs">
+            Maximum Value + Top Performance <span className="mx-1.5">•</span> Dharmapuri, Tamil Nadu, India
+          </p>
         </div>
       </div>
     </footer>

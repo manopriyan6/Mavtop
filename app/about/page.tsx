@@ -5,7 +5,7 @@ import WhyMavtopSection from "@/components/sections/WhyMavtopSection";
 import ContactCTASection from "@/components/sections/ContactCTASection";
 
 export const metadata: Metadata = {
-  title: "About Mavtop | Maximum Value & Performance",
+  title: "About Mavtop Technologies | Maximum Value & Performance",
   description: "Learn about Mavtop Technologies, our mission to build robust software, enterprise automation, and cloud platforms.",
 };
 
