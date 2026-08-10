@@ -37,13 +37,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly',
       priority: 0.85,
     },
-    // ── Portfolio / social proof ──────────────────────────
-    {
-      url: `${baseUrl}/case-studies`,
-      lastModified: now,
-      changeFrequency: 'monthly',
-      priority: 0.8,
-    },
     // ── Conversion page ───────────────────────────────────
     {
       url: `${baseUrl}/book`,

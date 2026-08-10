@@ -22,7 +22,6 @@ const footerLinks = {
     { label: "About Us", href: "/about" },
     { label: "Services", href: "/services" },
     { label: "Solutions", href: "/solutions" },
-    { label: "Case Studies", href: "/case-studies" },
     { label: "Contact", href: "/book" },
   ],
   Legal: [
