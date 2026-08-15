@@ -9,6 +9,27 @@ import BrandsSection from "@/components/sections/BrandsSection";
 
 export default function HeroSection() {
   const heroRef = useRef<HTMLElement>(null);
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const [showVideo, setShowVideo] = useState(false);
+
+  useEffect(() => {
+    const now = new Date();
+    if (now.getMonth() === 7 && now.getDate() < 16) {
+      setShowVideo(true);
+    }
+  }, []);
+
+  useEffect(() => {
+    if (videoRef.current) {
+      videoRef.current.volume = 0.15;
+      videoRef.current.play().catch(e => {
+        if (videoRef.current) {
+          videoRef.current.muted = true;
+          videoRef.current.play().catch(console.error);
+        }
+      });
+    }
+  }, [showVideo]);
 
   return (
     <section
@@ -66,25 +87,38 @@ export default function HeroSection() {
           </Link>
           
         </motion.div>
+      </div> {/* End of container-custom */}
 
-        {/* Large Mockup Image Placeholder */}
+      {/* Full-width container for Massive Mockup Image/Video */}
+      <div className="w-full flex flex-col items-center relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="w-full max-w-4xl mx-auto mt-4 px-4 sm:px-6 relative"
+          className="w-full px-3 md:px-0 md:w-[85vw] lg:w-[70vw] max-w-6xl mx-auto mt-8 relative"
         >
           <div className="relative w-full aspect-video rounded-xl md:rounded-2xl overflow-hidden bg-white dark:bg-[#131524] shadow-xl border border-slate-200 dark:border-slate-800 flex flex-col items-center justify-center">
             
-            {/* Static Image Placeholder */}
-            <div className="absolute inset-0 bg-white dark:bg-[#131524] flex items-center justify-center overflow-hidden">
-               <img 
-                 src="/hero-abstract.png" 
-                 alt="Mavtop Abstract Technology"
-                 className="w-full h-full object-cover object-center dark:opacity-30 transform-gpu"
-               />
-               <div className="absolute inset-0 hidden dark:block bg-gradient-to-tr from-[#0D0D0F]/90 via-transparent to-[#1E2038]/60 transform-gpu" />
-            </div>
+            {showVideo ? (
+              <div className="absolute inset-0 bg-white dark:bg-[#131524] flex items-center justify-center overflow-hidden">
+                 <video 
+                   ref={videoRef}
+                   src="/inde.mp4"
+                   loop 
+                   playsInline
+                   className="w-full h-full object-cover object-center transform-gpu"
+                 />
+              </div>
+            ) : (
+              <div className="absolute inset-0 bg-white dark:bg-[#131524] flex items-center justify-center overflow-hidden">
+                 <img 
+                   src="/hero-abstract.png" 
+                   alt="Mavtop Abstract Technology"
+                   className="w-full h-full object-cover object-center dark:opacity-30 transform-gpu"
+                 />
+                 <div className="absolute inset-0 hidden dark:block bg-gradient-to-tr from-[#0D0D0F]/90 via-transparent to-[#1E2038]/60 transform-gpu pointer-events-none" />
+              </div>
+            )}
 
           </div>
         </motion.div>

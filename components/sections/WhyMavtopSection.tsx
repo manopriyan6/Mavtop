@@ -135,7 +135,7 @@ export default function WhyMavtopSection() {
                 whileHover={{
                   y: -5,
                   boxShadow: `0 20px 50px rgba(0,0,0,0.05)`,
-                  borderColor: "transparent",
+                  borderColor: "rgba(0,0,0,0)",
                   transition: { duration: 0.3 },
                 }}
               >
