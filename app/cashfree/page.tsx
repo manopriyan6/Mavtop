@@ -333,7 +333,7 @@ export default function CashfreePage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 relative">
             {/* Connecting line (desktop) */}
-            <div className="hidden lg:block absolute top-9 left-[12.5%] right-[12.5%] h-px bg-gradient-to-r from-transparent via-brand-blue/30 to-transparent z-0" />
+            <div className="hidden lg:block absolute top-7 left-[10%] right-[10%] h-px bg-gradient-to-r from-transparent via-brand-blue/30 to-transparent z-0" />
 
             {steps.map((step, i) => (
               <motion.div
@@ -341,10 +341,11 @@ export default function CashfreePage() {
                 initial={{ opacity: 0, y: 30 }}
                 animate={stepsInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.5, delay: i * 0.1 }}
-                className="relative z-10 text-center"
+                className="relative z-10 text-center flex flex-col items-center"
               >
-                <div className="w-14 h-14 rounded-2xl bg-brand-blue/10 border border-brand-blue/20 flex items-center justify-center mx-auto mb-5">
-                  <span className="font-grotesk font-black text-lg text-brand-blue">
+                <div className="w-14 h-14 rounded-2xl bg-white dark:bg-[#131524] relative z-10 mx-auto mb-5 flex items-center justify-center border border-brand-blue/20 shadow-[0_0_15px_rgba(0,122,255,0.1)]">
+                  <div className="absolute inset-0 bg-brand-blue/10 rounded-2xl"></div>
+                  <span className="relative z-20 font-grotesk font-black text-lg text-brand-blue">
                     {step.step}
                   </span>
                 </div>
