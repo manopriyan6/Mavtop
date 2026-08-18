@@ -14,7 +14,7 @@ const products = [
     color: "#25D366",
     href: "https://automate.go4chat.in/",
     isExternal: true,
-  }
+  },
 ];
 
 export default function ProductsSection() {
@@ -83,10 +83,12 @@ export default function ProductsSection() {
                   </Link>
                 )}
               </motion.div>
-            )
+            );
           })}
         </div>
       </div>
     </section>
   );
 }
+
+

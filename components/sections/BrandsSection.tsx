@@ -1,6 +1,5 @@
 "use client";
 
-import { motion } from "framer-motion";
 import Image from "next/image";
 
 const brands = [
@@ -40,7 +39,7 @@ export default function BrandsSection() {
   return (
     <div className="w-full mt-auto pt-10 pb-6 relative z-20">
       <div className="container-custom">
-        <p className="text-center text-sm font-jakarta font-semibold text-slate-400 dark:text-slate-500 tracking-widest uppercase mb-12">
+        <p className="text-center text-sm font-jakarta font-semibold text-slate-400 dark:text-slate-500 tracking-widest uppercase mb-8">
           Trusted by industry leaders globally
         </p>
         
@@ -78,3 +77,5 @@ export default function BrandsSection() {
     </div>
   );
 }
+
+

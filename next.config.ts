@@ -5,9 +5,15 @@ const nextConfig: NextConfig = {
   // ONLY uncomment these if you go back to Hostinger/cPanel static hosting.
   // output: "export",
   // trailingSlash: true,
-  // images: {
-  //   unoptimized: true,
-  // },
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "cashfreelogo.cashfree.com",
+      },
+    ],
+  },
 };
 
 export default nextConfig;
+

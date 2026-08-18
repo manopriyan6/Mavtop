@@ -16,6 +16,7 @@ const footerLinks = {
   ],
   Products: [
     { label: "WhatsApp Cloud", href: "https://automate.go4chat.in/" },
+    { label: "Cashfree Onboarding", href: "/cashfree" },
   ],
   Company: [
     { label: "Home", href: "/" },

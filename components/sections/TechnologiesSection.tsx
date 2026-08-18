@@ -18,6 +18,7 @@ const technologies = [
   { name: "Meta", color: "#1877F2", letter: "M" },
   { name: "Google Cloud", color: "#4285F4", letter: "GC" },
   { name: "TypeScript", color: "#3178C6", letter: "TS" },
+  { name: "Cashfree", color: "#007AFF", letter: "CF" },
   { name: "Flutter", color: "#54C5F8", letter: "Fl" },
   { name: "Redis", color: "#DC382D", letter: "Re" },
   { name: "Nginx", color: "#009900", letter: "Nx" },

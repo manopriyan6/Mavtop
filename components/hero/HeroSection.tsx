@@ -44,8 +44,6 @@ export default function HeroSection() {
       </div>
 
       <div className="container-custom relative z-10 text-center flex flex-col items-center flex-1 justify-center">
-        
-
 
         {/* Headline */}
         <motion.h1
@@ -85,7 +83,6 @@ export default function HeroSection() {
             Book a Call
             <ArrowRight size={18} />
           </Link>
-          
         </motion.div>
       </div> {/* End of container-custom */}
 

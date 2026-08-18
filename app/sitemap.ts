@@ -37,6 +37,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly',
       priority: 0.85,
     },
+    // ── Partner pages ─────────────────────────────────────
+    {
+      url: `${baseUrl}/cashfree`,
+      lastModified: now,
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
     // ── Conversion page ───────────────────────────────────
     {
       url: `${baseUrl}/book`,
