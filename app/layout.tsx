@@ -47,6 +47,20 @@ export const metadata: Metadata = {
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  // ── Canonical URL ────────────────────────────────────────────────────────
+  // Explicitly declares https://mavtop.in as the authoritative URL.
+  // Fixes the "Page with redirect" issue where Google was unsure which
+  // http/https/www variant to treat as canonical.
+  alternates: {
+    canonical: 'https://mavtop.in',
   },
 };
 
