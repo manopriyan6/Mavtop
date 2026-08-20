@@ -48,15 +48,6 @@ export const metadata: Metadata = {
     index: true,
     follow: true,
   },
-  icons: {
-    icon: [
-      { url: "/favicon-mavtop.png", type: "image/png", sizes: "512x512" },
-    ],
-    apple: [
-      { url: "/favicon-mavtop.png", type: "image/png", sizes: "512x512" },
-    ],
-    shortcut: "/favicon-mavtop.png",
-  }
 };
 
 export default function RootLayout({
